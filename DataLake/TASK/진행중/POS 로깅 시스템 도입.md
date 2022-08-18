@@ -1,5 +1,6 @@
 # to-do list
-1. airflow 컴포넌트 별 airflow.cfg 의 auth_backend 수정
+- 2022-08-18
+	1. airflow 컴포넌트 별 airflow.cfg 의 auth_backend 수정
 	```
 	auth_backend = airflow.api.auth.backend.basic_auth
 	```
@@ -23,11 +24,12 @@
 1.  데이터 소스
 	1. airflow 웹서버 로깅 데이터
 		1. 소스
-			- META DB
-				-   [https://www.astronomer.io/guides/airflow-database/](https://www.astronomer.io/guides/airflow-database/)
-				-   [https://docs.astronomer.io/software/access-airflow-database](https://docs.astronomer.io/software/access-airflow-database)
-			- 로그 파일 : [lotte@CSDLLZ01] /data/infrastructure/airflow_server/logs/{DAG}/{task}/{retry_num}.log
-		2. 의사 결정 필요
+			- Meta Datasource 에 api 질의
+				-   [Airflow API using python code](https://www.astronomer.io/guides/airflow-database/)
+				-   [Access the Airflow DB](https://docs.astronomer.io/software/access-airflow-database)
+			- 로그 파일
+				- 위치 : [lotte@CSDLLZ01] /data/infrastructure/airflow_server/logs/{DAG}/{task}/{retry_num}.log
+		1. 의사 결정 필요
 			2. 수집주기
 				- 리얼타임 : 태스크별로 로깅을 바로 어느 통에 때려버릴 수 밖에 없음
 				- 세미 리얼타임 : 15분 ~ 30분
