@@ -1,0 +1,56 @@
+# 설계
+- 목적 : 추출, 변환, 적재 데이터 성공 여부 및 카운트 모니터링
+- 브레인스토밍
+	1.  화면에서 어떻게 데이터를 볼건지
+	2.  로깅 포맷
+		1. 적재, 집계 데이터를 유추할만한 유의미한 데이터를 어떻게 남길지
+		2. airflow 메타디비 활용방안 있는지
+		3. 전체 태스크 결과를 노가다 뛸건지
+	3.  어디에 데이터를 남길건지
+		1. 후보군
+			1. HFDS + HIVE
+			2. RDB : 로그 양이 HDFS에 넣을만한 양인지
+		2. ISSUE
+			1. 수기 업로드 데이터는 어떻게 할건지
+
+- 아이디어
+1.  데이터 소스 : 
+	1. airflow 웹서버 로깅 데이터
+		- META DB
+			-   [https://www.astronomer.io/guides/airflow-database/](https://www.astronomer.io/guides/airflow-database/)
+			-   [https://docs.astronomer.io/software/access-airflow-database](https://docs.astronomer.io/software/access-airflow-database)
+		- 로그 파일 : [lotte@CSDLLZ01] /data/infrastructure/airflow_server/logs/{DAG}/{task}/{retry_num}.log
+		4. 의사 결정 필요
+			2. 수집주기
+				- 리얼타임 : 태스크별로 로깅을 바로 어느 통에 때려버릴 수 밖에 없음
+				- 세미 리얼타임 : 15분 ~ 30분
+				- 배치 : 1 ~  3 시간 단위
+			3.  파싱
+			4.  필요 상태 값
+			5.  파싱 가능한 헤더 포맷
+			6.  워크 플로우
+1.   툴
+	1. 또어플로우? : 로그 데이터 자주 수집하면 airflow 태스크 병렬 실행에 영향줄듯?
+	2. 크론탭 : 쉘스크립트 공부
+
+2.  머신 : 분석노드
+
+3.  airflow 쓸거면 : worker를 분석노드에서
+4.  크론탭 쓸거면 : 분석노드에서
+
+5.  메타 db 활용 시
+
+6.  포맷
+
+7.  필요조건
+
+8.  파싱 가능한 헤더를 남겨야한다
+9.  성공, 실패 시 모두 남아야한다
+10.  kst 기준 타임스탬프를 남겨야한다
+
+11.  어디에 쌓을건가?
+
+12.  데이터 특성
+
+13.  메트릭(지표) 성 데이터가 있나? -> 쌓고 그라파나 시각화까지
+14.  메트릭성 없으면 table 형태까지만
