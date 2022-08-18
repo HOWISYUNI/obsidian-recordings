@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+            "file": "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md",
             "mode": "source",
             "source": false
           }
@@ -24,7 +24,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md"
+            "file": "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md"
           }
         },
         "group": "8704fb4d1115178f"
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+                "file": "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+                "file": "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md"
+                "file": "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md"
               }
             }
           }
@@ -144,8 +144,10 @@
   },
   "active": "fb60831c152beeca",
   "lastOpenFiles": [
-    "DataLake/test md.md",
+    "Pasted image 20220818161535.png",
+    "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+    "DataLake/test md.md",
     "DataLake/hadoop ecosystem/Hive/Hive On Tez.md"
   ]
 }
