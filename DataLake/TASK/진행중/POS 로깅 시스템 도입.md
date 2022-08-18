@@ -1,3 +1,9 @@
+# to-do list
+1. airflow 컴포넌트 별 airflow.cfg 의 auth_backend 수정
+	```
+	auth_backend = airflow.api.auth.backend.basic_auth
+	```
+	2. [airflow api](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html#tag/DAG)postman api 테스트
 # 설계
 - 목적 : 추출, 변환, 적재 데이터 성공 여부 및 카운트 모니터링
 - 브레인스토밍
@@ -14,13 +20,14 @@
 			1. 수기 업로드 데이터는 어떻게 할건지
 
 - 아이디어
-1.  데이터 소스 : 
+1.  데이터 소스
 	1. airflow 웹서버 로깅 데이터
-		- META DB
-			-   [https://www.astronomer.io/guides/airflow-database/](https://www.astronomer.io/guides/airflow-database/)
-			-   [https://docs.astronomer.io/software/access-airflow-database](https://docs.astronomer.io/software/access-airflow-database)
-		- 로그 파일 : [lotte@CSDLLZ01] /data/infrastructure/airflow_server/logs/{DAG}/{task}/{retry_num}.log
-		4. 의사 결정 필요
+		1. 소스
+			- META DB
+				-   [https://www.astronomer.io/guides/airflow-database/](https://www.astronomer.io/guides/airflow-database/)
+				-   [https://docs.astronomer.io/software/access-airflow-database](https://docs.astronomer.io/software/access-airflow-database)
+			- 로그 파일 : [lotte@CSDLLZ01] /data/infrastructure/airflow_server/logs/{DAG}/{task}/{retry_num}.log
+		2. 의사 결정 필요
 			2. 수집주기
 				- 리얼타임 : 태스크별로 로깅을 바로 어느 통에 때려버릴 수 밖에 없음
 				- 세미 리얼타임 : 15분 ~ 30분
@@ -28,29 +35,23 @@
 			3.  파싱
 			4.  필요 상태 값
 			5.  파싱 가능한 헤더 포맷
-			6.  워크 플로우
-1.   툴
+	2. 태스크 내 로깅 코드라인추가
+		1. 
+2.   툴
 	1. 또어플로우? : 로그 데이터 자주 수집하면 airflow 태스크 병렬 실행에 영향줄듯?
 	2. 크론탭 : 쉘스크립트 공부
 
-2.  머신 : 분석노드
+3.  머신 : 분석노드
+	- airflow 쓸거면 : worker를 분석노드에서
+	- 크론탭 쓸거면 : 분석노드에서
+- 
 
-3.  airflow 쓸거면 : worker를 분석노드에서
-4.  크론탭 쓸거면 : 분석노드에서
-
-5.  메타 db 활용 시
-
-6.  포맷
-
-7.  필요조건
-
-8.  파싱 가능한 헤더를 남겨야한다
-9.  성공, 실패 시 모두 남아야한다
-10.  kst 기준 타임스탬프를 남겨야한다
-
-11.  어디에 쌓을건가?
-
-12.  데이터 특성
-
-13.  메트릭(지표) 성 데이터가 있나? -> 쌓고 그라파나 시각화까지
-14.  메트릭성 없으면 table 형태까지만
+4.  포맷
+	1.  필요조건
+		- 파싱 가능한 헤더를 남겨야한다
+		- 성공, 실패 시 모두 남아야한다
+		- kst 기준 타임스탬프를 남겨야한다
+	2.  어디에 쌓을건가?
+	3.  데이터 특성
+		- 메트릭(지표) 성 데이터가 있나? -> 쌓고 그라파나 시각화까지
+		- 메트릭성 없으면 table 형태까지만
