@@ -1,6 +1,6 @@
 # to-do list
 - 2022-08-18
-	1. airflow 컴포넌트 별 airflow.cfg 의 auth_backend 수정
+	1. airflow 컴포넌트 별 airflow.cfg 의 auth_backend 수정 로컬 테스트
 	```
 	auth_backend = airflow.api.auth.backend.basic_auth
 	```
