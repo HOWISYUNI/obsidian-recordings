@@ -4,30 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fb60831c152beeca",
+        "id": "797eeb62ac7ec37d",
         "type": "leaf",
-        "dimension": 87.17948717948718,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DataLake/Language/python.md",
+            "file": "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
             "mode": "source",
             "source": false
           }
-        },
-        "group": "8704fb4d1115178f"
-      },
-      {
-        "id": "20d006db8dce4193",
-        "type": "leaf",
-        "dimension": 12.82051282051282,
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "DataLake/Language/python.md"
-          }
-        },
-        "group": "8704fb4d1115178f"
+        }
       }
     ],
     "direction": "vertical"
@@ -91,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/Language/python.md",
+                "file": "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/Language/python.md",
+                "file": "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,27 +117,36 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/Language/python.md"
+                "file": "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md"
               }
             }
+          },
+          {
+            "id": "3def5e24c0fc2b46",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "fb60831c152beeca",
+  "active": "797eeb62ac7ec37d",
   "lastOpenFiles": [
+    "Pasted image 20220830181754.png",
+    "Pasted image 20220830181801.png",
+    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "DataLake/Docker/Docker.md",
+    "Pasted image 20220818162254.png",
+    "DataLake/Language/python.md",
     "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "DataLake/hadoop ecosystem/Hive/Hive On Tez.md",
-    "DataLake/TASK/진행중/POS 로깅 시스템 도입.md",
-    "DataLake/TASK/진행중/TODO LIST.md",
-    "DataLake/무제노트.md",
-    "Pasted image 20220818161535.png",
-    "DataLake/test md.md"
+    "DataLake/TASK/진행중/POS 로깅 시스템 도입.md"
   ]
 }
