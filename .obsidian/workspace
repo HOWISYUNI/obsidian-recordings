@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
+            "file": "gitlab CICD/CI CD 구축 튜토리얼.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
+                "file": "gitlab CICD/CI CD 구축 튜토리얼.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
+                "file": "gitlab CICD/CI CD 구축 튜토리얼.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md"
+                "file": "gitlab CICD/CI CD 구축 튜토리얼.md"
               }
             }
           },
@@ -138,12 +138,12 @@
   },
   "active": "797eeb62ac7ec37d",
   "lastOpenFiles": [
+    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "Pasted image 20220830181754.png",
     "Pasted image 20220830181801.png",
-    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
-    "DataLake/Docker/Docker.md",
+    "Docker/Docker.md",
     "Pasted image 20220818162254.png",
-    "DataLake/Language/python.md",
+    "Language/python.md",
     "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "DataLake/hadoop ecosystem/Hive/Hive On Tez.md",
