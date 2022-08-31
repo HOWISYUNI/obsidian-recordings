@@ -17,6 +17,16 @@ GROUP BY pv_users.gender
 하나 이상의 Group By 키를 설정할 때 사용
 다수의 Group by 쿼리에 대한 UNION 결과와 동일
 ![[Pasted image 20220831171527.png]]
+
+## Cubes
+group by key 값에 대해 모든 가능한 조합으로 group by를 수행
+![[Pasted image 20220831172259.png]]
+
+## Rollups
+hierarchy level의 aggregation을 수행
+Group by a,b,c는 a를 drill down 하는 hirearchy를 가정
+![[Pasted image 20220831172357.png]]
+
 ----------------------------------------------------------------------
 # 데이터타입
 ![[Pasted image 20220818162246.png]]
