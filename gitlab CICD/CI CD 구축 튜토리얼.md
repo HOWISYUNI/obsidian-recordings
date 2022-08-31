@@ -1,4 +1,8 @@
-1. gitlab web 프로젝트 생성
+1. gitlab 프로젝트 생성
+	1. 칠성에서는 HCI 위 LCSVCS 서버에 gitlab 소스코드들이 온프레미스로 올라가있다
+	2. LCSVCS
+		- 10.120.2.18 (`ping git.lottechilsung.co.kr`)
+		- http://git.lottechilsung.co.kr:7777/
 2. 서버에 gilab-runner 설치
 3. gitlab web에 runner 등록
 	1. Settings > CI/CD > expand
