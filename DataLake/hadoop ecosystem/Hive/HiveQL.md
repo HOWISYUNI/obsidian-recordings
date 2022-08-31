@@ -15,7 +15,7 @@ GROUP BY pv_users.gender
 ```
 ## GROUPING SETS
 하나 이상의 Group By 키를 설정할 때 사용
-다수의 Group by 쿼리에 대한 UNION 결과와 동일
+다수의 Group by 쿼리에 대한 UNION 결과와 동일함
 ![[Pasted image 20220831171527.png]]
 
 ## Cubes
