@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "b81546dac49068e4",
+        "id": "8fb3c4707c634e48",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+            "file": "Language/Airflow Python API.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+                "file": "Language/Airflow Python API.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+                "file": "Language/Airflow Python API.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md"
+                "file": "Language/Airflow Python API.md"
               }
             }
           },
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b81546dac49068e4",
+  "active": "8fb3c4707c634e48",
   "lastOpenFiles": [
+    "Language/Pandas.md",
+    "Language/Airflow Python API.md",
+    "Language/python.md",
+    "DataLake/Linux SSH key 생성 및 등록.md",
+    "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "DataLake/hadoop ecosystem/Hive/Hive On Tez.md",
     "gitlab CICD/CI CD 구축 튜토리얼.md",
-    "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "Pasted image 20220830181754.png",
-    "Pasted image 20220830181801.png",
-    "Docker/Docker.md",
-    "Pasted image 20220818162254.png",
-    "Language/python.md",
-    "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md"
+    "Pasted image 20220830181801.png"
   ]
 }
