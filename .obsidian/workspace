@@ -130,13 +130,13 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
-  "active": "92730ec074fa8358",
+  "active": "d09af98b0262bc4f",
   "lastOpenFiles": [
     "Language/python.md",
     "Infra/SSH key 생성 및 등록.md",
