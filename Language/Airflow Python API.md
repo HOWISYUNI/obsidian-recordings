@@ -62,7 +62,7 @@ task_whsinfo010 = PythonOperator(
 ```
 
 Python Callable에서는 아래와 같이 사용한다
-`**kwargs`라던지 `*context*` 라던지 변수명은 중요하지 않고 keyword argument들을 언패킹할수있는 변수만 callable의 파라미터로 넣어주고 callable안에서 사용하면 된다.
+`**kwargs`라던지 `**context` 라던지 변수명은 중요하지 않고 keyword argument들을 언패킹할수있는 변수만 callable의 파라미터로 넣어주고 callable안에서 사용하면 된다.
 ```python
 
 def whsinfo010(**context):
@@ -72,7 +72,8 @@ def whsinfo010(**context):
     hanaDB = context['params']['destinationDB']
    ...
 ```
-사실 얘네들은 태스크 특성(task attribute)라 airflow GUI에서 확인 가능하다
+사실 얘네들은 태스크 속성(task attribute)라 airflow GUI에서 확인 가능하다
+
 GUI로 들어가서
 ![[Pasted image 20220901180142.png]]
 Task Attributes를 확인하면
