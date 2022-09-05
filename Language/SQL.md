@@ -8,3 +8,5 @@
 ![[Pasted image 20220903104038.png]]
 6. 테이블 삭제 : DROP
 ![[Pasted image 20220903104050.png]]
+
+# INSERT INTO
