@@ -1,3 +1,10 @@
+# 문법
+## pandas.DataFrame.to_csv()
+![[Pasted image 20220906190731.png]]
+1. parameters
+	- header=False : dataframe에서 필드 이름 라인 제거하여 저장
+	- index=False : dataframe에서 행 번호 삭제하여 저장
+# 특징
 ## dataframe iteration
 | 속도순위 | method     | `iterrrows` 대비 속도 |
 | -------- | ---------- | --------------------- |

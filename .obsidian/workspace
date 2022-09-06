@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "92730ec074fa8358",
+        "id": "2bf2f86c13e6df24",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/SQL.md",
+            "file": "DB/__SQL.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/SQL.md",
+                "file": "DB/__SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Language/SQL.md",
+                "file": "DB/__SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/SQL.md"
+                "file": "DB/__SQL.md"
               }
             }
           },
@@ -130,23 +130,23 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
-  "active": "92730ec074fa8358",
+  "active": "2bf2f86c13e6df24",
   "lastOpenFiles": [
+    "DB/Maria DB.md",
+    "DB/__SQL.md",
+    "Language/Pandas.md",
     "Language/Airflow Python API.md",
-    "Language/SQL.md",
     "Language/python.md",
     "Infra/SSH key 생성 및 등록.md",
-    "Language/Pandas.md",
     "DataLake/Linux SSH key 생성 및 등록.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "DataLake/hadoop ecosystem/Hive/Hive On Tez.md",
-    "gitlab CICD/CI CD 구축 튜토리얼.md",
-    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md"
+    "gitlab CICD/CI CD 구축 튜토리얼.md"
   ]
 }
