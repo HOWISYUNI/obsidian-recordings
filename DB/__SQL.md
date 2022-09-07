@@ -62,7 +62,7 @@ BULK INSERT 중 가장 속도가 빠른 쿼리 (일반 INSERT 쿼리의 약 20�
 - 예시
 ```sql
 LOAD DATA LOCAL INFILE '{path}'
-REPLACE                                           -- REPLACE ; 중복키값 INSERT 시 처리 방법
+-- REPLACE                                           -- REPLACE ; 중복키값 INSERT 시 처리 방법, 얘 쓰면 REPLACE INTO 로 도는거랑 같아서 성능 안좋음...
 INTO TABLE msfa.f_weekly_2021_temp
 FIELDS                                            -- FIELDS 구문 
     TERMINATED BY ','                             -- TERMINATED ; 필드 구분자
