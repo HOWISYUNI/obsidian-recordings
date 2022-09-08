@@ -1,7 +1,10 @@
 # Parquet
 ## 사용하는 이유
 1. Hive 성능 향상 : Hive Vectorized Operation 사용 가능
-2. CSV 에 비해 작은 파일 크기
+2. CSV 에 비해 우수한 퍼포먼스
+[출처](https://dzone.com/articles/how-to-be-a-hero-with-powerful-parquet-google-and)
+![[Pasted image 20220908140713.png]]
+
 ## 압축알고리즘 별 비교
 [출처](https://stackoverflow.com/questions/35789412/spark-sql-difference-between-gzip-vs-snappy-vs-lzo-compression-formats)
 | 압축 알고리즘 | 장점                           | 단점                           |

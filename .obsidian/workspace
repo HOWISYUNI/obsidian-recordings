@@ -139,14 +139,14 @@
   "active": "3f912c315f035175",
   "lastOpenFiles": [
     "DataLake/hadoop ecosystem/Hive/Hive On Tez.md",
+    "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+    "DataLake/hadoop ecosystem/HDFS.md",
     "Language/Pandas.md",
     "DB/__SQL.md",
     "DB/Maria DB.md",
     "Language/Airflow Python API.md",
     "Language/python.md",
     "Infra/SSH key 생성 및 등록.md",
-    "DataLake/Linux SSH key 생성 및 등록.md",
-    "DataLake/hadoop ecosystem/Hive/HiveQL.md",
-    "gitlab CICD/CI CD 구축 튜토리얼.md"
+    "DataLake/Linux SSH key 생성 및 등록.md"
   ]
 }
