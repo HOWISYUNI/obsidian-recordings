@@ -22,6 +22,16 @@
 
 ### missing value = None, np.nan, Null
 1. DataFrame.isnull() = isna()와 동일![[Pasted image 20220907143237.png]]
+2. 컬럼 별 missing value 찾기
+```python
+# 1. 컬럼 별 missing value 카운트
+df.isnull().sum()
+
+# 2. missing value 확인하는 컬럼 특정해서 관찰
+df.loc[df.fieldName.isnull()]
+
+```
+![[Pasted image 20220908114944.png]]
 
 ## Slicing, Selecting, Filtering
 ### Column
