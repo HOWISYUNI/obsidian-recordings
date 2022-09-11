@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "83b8b68b3de23130",
+        "id": "5bf7f3c14f6d406f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/python.md",
+            "file": "취업후기.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/python.md",
+                "file": "취업후기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Language/python.md",
+                "file": "취업후기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/python.md"
+                "file": "취업후기.md"
               }
             }
           },
@@ -136,8 +136,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "83b8b68b3de23130",
+  "active": "5bf7f3c14f6d406f",
   "lastOpenFiles": [
+    "취업후기.md",
+    "Language/python.md",
     "DataLake/hadoop ecosystem/HDFS.md",
     "DataLake/hadoop ecosystem/Hive/Hive On Tez.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
@@ -145,8 +147,6 @@
     "DB/__SQL.md",
     "DB/Maria DB.md",
     "Language/Airflow Python API.md",
-    "Language/python.md",
-    "Infra/SSH key 생성 및 등록.md",
-    "DataLake/Linux SSH key 생성 및 등록.md"
+    "Infra/SSH key 생성 및 등록.md"
   ]
 }
