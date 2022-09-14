@@ -33,7 +33,7 @@
 | 압축 알고리즘 | 장점                           | 단점                           |
 | ------------- | ------------------------------ | ------------------------------ |
 | gzip          | 높은 압축률 = 파일 크기 작다   | 느리다(Throughput), Split 불가 |
-| snappy(, lzo   | 빠르다(Throughput), Splittable | 낮은 압축률 = 파일 크기 크다   |
+| snappy, lzo   | 빠르다(Throughput), Splittable | 낮은 압축률 = 파일 크기 크다   |
 
 ![[Pasted image 20220908122825.png]]
 
