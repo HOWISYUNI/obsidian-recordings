@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DataLake/hadoop ecosystem/HDFS.md",
+            "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/hadoop ecosystem/HDFS.md",
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/hadoop ecosystem/HDFS.md",
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/hadoop ecosystem/HDFS.md"
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md"
               }
             }
           },
@@ -139,13 +139,13 @@
   "active": "d625e9aa5a85d02c",
   "lastOpenFiles": [
     "DataLake/hadoop ecosystem/YARN.md",
+    "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+    "DataLake/hadoop ecosystem/Hive/Hive On Tez.md",
+    "DataLake/hadoop ecosystem/HDFS.md",
     "DataLake/Linux SSH key 생성 및 등록.md",
     "Language/Pandas.md",
     "취업후기.md",
     "Language/python.md",
-    "DataLake/hadoop ecosystem/HDFS.md",
-    "DataLake/hadoop ecosystem/Hive/Hive On Tez.md",
-    "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "DB/__SQL.md",
     "DB/Maria DB.md"
   ]
