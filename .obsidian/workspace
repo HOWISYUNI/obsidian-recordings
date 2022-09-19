@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DataLake/hadoop ecosystem/kafka.md",
+            "file": "취업후기.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/hadoop ecosystem/kafka.md",
+                "file": "취업후기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/hadoop ecosystem/kafka.md",
+                "file": "취업후기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/hadoop ecosystem/kafka.md"
+                "file": "취업후기.md"
               }
             }
           },
@@ -138,6 +138,7 @@
   },
   "active": "d625e9aa5a85d02c",
   "lastOpenFiles": [
+    "DataLake/hadoop ecosystem/Spark.md",
     "취업후기.md",
     "Language/Pandas.md",
     "DB/__SQL.md",
@@ -146,7 +147,6 @@
     "DataLake/hadoop ecosystem/Hive/Hive On Tez.md",
     "DataLake/hadoop ecosystem/HDFS.md",
     "DataLake/Linux SSH key 생성 및 등록.md",
-    "Language/python.md",
-    "DB/Maria DB.md"
+    "Language/python.md"
   ]
 }
