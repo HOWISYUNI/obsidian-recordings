@@ -45,3 +45,24 @@ pyarrow 이나 fastparquet 패키지를 환경에 받고,
 
 #### WRITE
 ![[Pasted image 20220908145215.png]]
+
+## Python AP를 활용해 Parquet을 DL에서 사용하기
+### HDFS Client로 upload
+1. 로컬에 parquet 파일로 떨구기
+[Pandas to_parquet 문서](https://pandas.pydata.org/pandas-docs/version/1.1/reference/api/pandas.DataFrame.to_parquet.html)
+```python
+# 엔진은 디폴트 pyarrow 엔진
+# 압축은 디폴트 snappy 압축
+df.to_parquet(path=local_path_parquet, index=False, engine='pyarrow', compression='snappy')
+```
+2. hdfs로 upload
+```python
+hdfs_client.upload(hdfs_path=file_location, local_path=local_path_parquet, overwrite=True)
+```
+3. HIve에 parquet 테이블 생성하고
+[[HiveQL#PARQUET]]
+4. 테이블 필요하면 파티셔닝
+[[HiveQL#ADD PARTITION]]
+
+### Spark로 Hive 테이블에 Insert해 HDFS 에 parquet 자동 생성
+[[Spark#parqute hive 테이블 데이터 insert]]
