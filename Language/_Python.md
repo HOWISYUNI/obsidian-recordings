@@ -22,6 +22,9 @@ https://pnavaro.github.io/big-data/14-FileFormats.html
 
 
 
+# 언패킹
+## 딕셔너리 언패킹
+## 리스트 언패킹
 
 
 
