@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "678d617da76929e0",
+        "id": "755cc43226a63526",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DataLake/hadoop ecosystem/HDFS.md",
+            "file": "linux.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/hadoop ecosystem/HDFS.md",
+                "file": "linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/hadoop ecosystem/HDFS.md",
+                "file": "linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/hadoop ecosystem/HDFS.md"
+                "file": "linux.md"
               }
             }
           },
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "678d617da76929e0",
+  "active": "755cc43226a63526",
   "lastOpenFiles": [
-    "DataLake/hadoop ecosystem/Spark.md",
-    "DataLake/hadoop ecosystem/HDFS.md",
-    "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "Language/Pandas.md",
+    "Language/Airflow Python API.md",
+    "Language/_Python.md",
+    "DataLake/hadoop ecosystem/Spark.md",
     "취업후기.md",
+    "DataLake/hadoop ecosystem/HDFS/General.md",
+    "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+    "DataLake/hadoop ecosystem/HDFS/분석서버 초기세팅.md",
     "DB/__SQL.md",
-    "DataLake/hadoop ecosystem/YARN.md",
-    "DataLake/hadoop ecosystem/Hive/Hive On Tez.md",
-    "DataLake/Linux SSH key 생성 및 등록.md",
-    "Language/python.md"
+    "DataLake/hadoop ecosystem/YARN.md"
   ]
 }

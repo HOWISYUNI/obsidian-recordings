@@ -17,12 +17,12 @@ ROW FORMAT DELIMITED
       ESCAPED BY '\\'
       LINES TERMINATED BY '\n' 
 STORED AS TEXTFILE              -- 포맷 : 텍스트파일
-LOCATION '/path/to/your/data' -- INSERT 수행 시 데이터가 쌓이는 위치
+LOCATION '/path/to/your/data' -- INSERT문 수행 시 데이터가 쌓이는 위치
 ```
 ## PARQUET
 ```SQL
 CREATE EXTERNAL TABLE ext_pos_ltmart_liq_sale(
-	sale_date date COMMENT '판매일자',
+	sale_date varchar(8) COMMENT '판매일자',
 	store_cd varchar(5) COMMENT '점포코드',
 	sale_time varchar(5) COMMENT '판매시각',
 	barcd string COMMENT '제품바코드',
@@ -40,6 +40,9 @@ LOCATION '/path/to/your/data' -- INSERT 수행 시 데이터가 쌓이는 위치
 ## ADD PARTITION
 ## DROP PARTITION
 ## CHANGE COLUMN
+![[Pasted image 20220928143142.png]]
+![[Pasted image 20220928143151.png]]
+
 # SHOW PARTITIONS
 # DESCRIBE
 # GROUP
