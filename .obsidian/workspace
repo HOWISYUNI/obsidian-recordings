@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/_Python.md",
+            "file": "Language/Airflow Python API.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/_Python.md",
+                "file": "Language/Airflow Python API.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Language/_Python.md",
+                "file": "Language/Airflow Python API.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/_Python.md"
+                "file": "Language/Airflow Python API.md"
               }
             }
           },
@@ -138,9 +138,9 @@
   },
   "active": "755cc43226a63526",
   "lastOpenFiles": [
-    "Language/Airflow Python API.md",
-    "Language/_Python.md",
     "Language/Pandas.md",
+    "Language/_Python.md",
+    "Language/Airflow Python API.md",
     "linux.md",
     "DataLake/hadoop ecosystem/Spark.md",
     "취업후기.md",

@@ -38,6 +38,50 @@ calculate_stats=PythonOperator(
 
 ### 2. Python Callable 원하는 변수 주입
 
+#### op_kwargs로 주입할 경우 = DAG 기본파라미터와 같은 레벨 딕셔너리로 사용 가능
+아래같이 op_kwargs로 원하는 변수를 묶어서 전달하면
+```python
+# SUBDAG_tsis.py
+task_partition_on_hive = PythonOperator(
+
+	task_id= "task_patition_on_hive",
+
+	python_callable= partition_hive,
+
+	op_kwargs= {
+
+		"schema" : CONFIG['HIVE']['TSIS']['SCHEMA'],
+
+		"location" : CONFIG['HIVE']['TSIS']['LOCATION'],
+
+		"query" : CONFIG['HIVE']['QUERY']
+
+		}
+
+	)
+```
+
+airflow DAG 기본 파라미터들(ex. execution_date) 과 같은 레벨에서 사용 가능
+```python
+def partition_hive(**kwargs) -> None:
+
+    schema = kwargs['schema']
+
+    pt_ymd =  kwargs['execution_date'].format('YYYYMM') # 전월 연월
+
+    query = kwargs['query']
+
+  
+
+    year = pt_ymd[:4]
+
+    month = pt_ymd[4:]
+
+    location = kwargs['location'].format(year=year, month=month)
+```
+
+
+#### 다른 이름으로 주입할 경우 = DAG 하위 파라미터로 사용 가능
 DAG에서 PythonOperator 태스크가 아래같이 설정돼있다면
 ```python
 # 제품 재고이동
@@ -63,6 +107,7 @@ task_whsinfo010 = PythonOperator(
 
 Python Callable에서는 아래와 같이 사용한다
 `**kwargs`라던지 `**context` 라던지 변수명은 중요하지 않고 keyword argument들을 언패킹할수있는 변수만 callable의 파라미터로 넣어주고 callable안에서 사용하면 된다.
+execution_date와 같은 DAG 기본 파라미터 같은 경우 `context['execution_date']` 같이 사용하지만, 다른 이름으로 주입한 경우 `context['params']['loadType']` 하위 레벨로 호출해야한다
 ```python
 
 def whsinfo010(**context):
@@ -72,6 +117,7 @@ def whsinfo010(**context):
     hanaDB = context['params']['destinationDB']
    ...
 ```
+
 사실 얘네들은 태스크 속성(task attribute)라 airflow GUI에서 확인 가능하다
 
 GUI로 들어가서
