@@ -24,7 +24,10 @@ https://pnavaro.github.io/big-data/14-FileFormats.html
 
 # 언패킹
 ## 딕셔너리 언패킹
+![[Pasted image 20221004154052.png]]
 ## 리스트 언패킹
+![[Pasted image 20221004153742.png]]
+
 
 
 
