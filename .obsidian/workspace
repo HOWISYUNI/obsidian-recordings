@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "15eba8871d8b39c1",
+        "id": "7cb72ba8b3bafdcb",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DB/Maria DB.md",
+            "file": "DataLake/Infra/Jupyter Hub.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DB/Maria DB.md",
+                "file": "DataLake/Infra/Jupyter Hub.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DB/Maria DB.md",
+                "file": "DataLake/Infra/Jupyter Hub.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DB/Maria DB.md"
+                "file": "DataLake/Infra/Jupyter Hub.md"
               }
             }
           },
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "15eba8871d8b39c1",
+  "active": "7cb72ba8b3bafdcb",
   "lastOpenFiles": [
+    "DataLake/Infra/Jupyter Hub.md",
+    "DataLake/Linux SSH key 생성 및 등록.md",
+    "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md",
+    "DataLake/TASK/진행중/POS 로깅 시스템 도입.md",
+    "DB/__SQL.md",
     "DB/Maria DB.md",
     "Language/_Python.md",
-    "DB/__SQL.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "Language/Airflow Python API.md",
-    "Language/Pandas.md",
-    "linux.md",
-    "DataLake/hadoop ecosystem/Spark.md",
-    "취업후기.md",
-    "DataLake/hadoop ecosystem/HDFS/General.md"
+    "Language/Pandas.md"
   ]
 }
