@@ -133,4 +133,18 @@ Python Operator 정의는 아래같다 ([출처](https://airflow.apache.org/docs
 Python Operator 소스를 보면 아래처럼 흘러서, 합해진 딕셔너리 변수가 pytho  callable 함수로 전달된다
 ![[Pasted image 20220901181026.png]]
 	모든 operator들은(python operator까지 포함해서) __baseoperator__를 상속하니 더 깊은 내용을 알고싶으면 baseoperator를 까보시길 추천한다 ([소스코드](https://airflow.apache.org/docs/apache-airflow/stable/_modules/airflow/models/baseoperator.html#ScheduleInterval))
-	
+
+# DAG
+## schedule_interval
+[출처](https://velog.io/@jay2u8809/Crontab%ED%81%AC%EB%A1%A0%ED%83%AD-%EC%8B%9C%EA%B0%84-%EC%84%A4%EC%A0%95)[Crontab Guru](https://crontab.guru/#5_0_*_*_*)
+| 분     | 시각 | 몇 일        | 월    | 요일        |
+| ------ | ---- | ------------ | ----- | ----------- |
+| minute | hour | day of month | month | day of week |
+|        |      |              |       |             |
+
+| 문자 | 의미                         | 예시                                                                  |
+| ---- | ---------------------------- | --------------------------------------------------------------------- |
+| *    | every. 1 단위 | `0 17 * * 1`                     매주 월요일 17시                     |
+| /    | 마다     | `*/5 * * * *`   매일 5분 마다                                         |
+| -    | 구간                         | `5 8-20/3 * * *` 매일 8시~20시 사이 3시간마다 5분에(08:05, 11:05 ...) |
+| ,    | 그리고                       | `0 6,12 * * 0,3` 수, 일요일마다 06시, 12시                        |
