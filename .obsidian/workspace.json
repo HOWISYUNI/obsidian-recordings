@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "ce91c4294e9a5c02",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bd577aedf05a674",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "716fdbfedac5154a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DataLake/Apache Airflow/칠성 airflow.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fb905d3cfcc2e814",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.0"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e2e3b34e911aecf7",
+    "type": "split",
+    "children": [
+      {
+        "id": "29e1706dcbf6029c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e597234f70020723",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b76da68006098587",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "itertuple",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "92f61a7c3a5f7271",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e36a518f57cfbb8b",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5017f8e461a021c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb46c5a6bdfa159b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DataLake/Apache Airflow/칠성 airflow.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d09af98b0262bc4f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "DataLake/Apache Airflow/칠성 airflow.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "684b89321bce6aeb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a6897533a43ddcc4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "DataLake/Apache Airflow/칠성 airflow.md"
+              }
+            }
+          },
+          {
+            "id": "3def5e24c0fc2b46",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "fb905d3cfcc2e814",
+  "lastOpenFiles": [
+    "DataLake/Apache Airflow/Airflow Python API.md",
+    "계정들.md",
+    "DB/__SQL.md",
+    "DataLake/Infra/lInux.md",
+    "linux.md",
+    "Language/Pandas.md",
+    "DataLake/Infra/Jupyter Hub.md",
+    "DataLake/Linux SSH key 생성 및 등록.md",
+    "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md",
+    "DataLake/TASK/진행중/POS 로깅 시스템 도입.md"
+  ]
+}
