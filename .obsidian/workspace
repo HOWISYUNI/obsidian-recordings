@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "계정들.md",
+            "file": "DataLake/Apache Airflow/칠성 airflow.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/Apache Airflow/칠성 airflow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/Apache Airflow/칠성 airflow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "계정들.md"
+                "file": "DataLake/Apache Airflow/칠성 airflow.md"
               }
             }
           },
@@ -138,11 +138,11 @@
   },
   "active": "716fdbfedac5154a",
   "lastOpenFiles": [
+    "DataLake/Apache Airflow/Airflow Python API.md",
+    "계정들.md",
     "DB/__SQL.md",
     "DataLake/Infra/lInux.md",
     "linux.md",
-    "계정들.md",
-    "Language/Airflow Python API.md",
     "Language/Pandas.md",
     "DataLake/Infra/Jupyter Hub.md",
     "DataLake/Linux SSH key 생성 및 등록.md",
