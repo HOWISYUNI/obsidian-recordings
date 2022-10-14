@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DataLake/Apache Airflow/칠성 airflow.md",
+                "file": "계정들.md",
                 "mode": "source",
                 "source": false
               }
@@ -29,8 +29,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/Apache Airflow/칠성 airflow.md",
+                "file": "계정들.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/Apache Airflow/칠성 airflow.md",
+                "file": "계정들.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/Apache Airflow/칠성 airflow.md"
+                "file": "계정들.md"
               }
             }
           },
@@ -158,8 +157,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "fb905d3cfcc2e814",
+  "active": "716fdbfedac5154a",
   "lastOpenFiles": [
+    "DataLake/Apache Airflow/칠성 airflow.md",
     "DataLake/Apache Airflow/Airflow Python API.md",
     "계정들.md",
     "DB/__SQL.md",
@@ -168,7 +168,6 @@
     "Language/Pandas.md",
     "DataLake/Infra/Jupyter Hub.md",
     "DataLake/Linux SSH key 생성 및 등록.md",
-    "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md",
-    "DataLake/TASK/진행중/POS 로깅 시스템 도입.md"
+    "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md"
   ]
 }
