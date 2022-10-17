@@ -4,28 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "2bd577aedf05a674",
+        "id": "fabfd6ab70ac3c82",
         "type": "tabs",
         "children": [
           {
-            "id": "716fdbfedac5154a",
+            "id": "f35d0840b5dce893",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/Apache Airflow/Airflow Python API.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "fb905d3cfcc2e814",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.0.0"
               }
             }
           }
@@ -95,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/Apache Airflow/Airflow Python API.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/Apache Airflow/Airflow Python API.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "계정들.md"
+                "file": "DataLake/Apache Airflow/Airflow Python API.md"
               }
             }
           },
@@ -157,17 +147,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "716fdbfedac5154a",
+  "active": "f35d0840b5dce893",
   "lastOpenFiles": [
-    "DataLake/Apache Airflow/칠성 airflow.md",
+    "DataLake/Apache Airflow/Concept.md",
     "DataLake/Apache Airflow/Airflow Python API.md",
+    "MLOPS/아키텍쳐.md",
     "계정들.md",
+    "MLOPS/BentoML.md",
+    "DataLake/Apache Airflow/칠성 airflow.md",
     "DB/__SQL.md",
     "DataLake/Infra/lInux.md",
     "linux.md",
-    "Language/Pandas.md",
-    "DataLake/Infra/Jupyter Hub.md",
-    "DataLake/Linux SSH key 생성 및 등록.md",
-    "DataLake/TASK/진행중/kafka 메시지 브로커 서버 도입.md"
+    "Language/Pandas.md"
   ]
 }
