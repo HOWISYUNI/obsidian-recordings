@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Language/_Python.md",
+                "file": "Infra/linux 일반.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/_Python.md",
+                "file": "Infra/linux 일반.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Language/_Python.md",
+                "file": "Infra/linux 일반.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/_Python.md"
+                "file": "Infra/linux 일반.md"
               }
             }
           },
@@ -149,15 +149,15 @@
   },
   "active": "f35d0840b5dce893",
   "lastOpenFiles": [
-    "DataLake/Apache Airflow/Airflow Python API.md",
-    "DataLake/Apache Airflow/Concept.md",
-    "MLOPS/아키텍쳐.md",
-    "계정들.md",
-    "MLOPS/BentoML.md",
-    "DataLake/Apache Airflow/칠성 airflow.md",
-    "DB/__SQL.md",
-    "DataLake/Infra/lInux.md",
+    "Infra/SSH key 생성 및 등록.md",
+    "Infra/linux 일반.md",
     "linux.md",
-    "Language/Pandas.md"
+    "DataLake/Infra/Jupyter Hub.md",
+    "Language/_Python.md",
+    "Language/Pandas.md",
+    "MLOPS/아키텍쳐.md",
+    "MLOPS/BentoML.md",
+    "계정들.md",
+    "DataLake/Linux SSH key 생성 및 등록.md"
   ]
 }
