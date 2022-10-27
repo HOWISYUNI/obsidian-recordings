@@ -45,7 +45,10 @@ class Base():
 	def __init___():
 		instance_attr = "INSTANCE ATTR" # 인스턴스에만 할당되는 메모리
 ```
-![[Pasted image 20221018105533.png]]
+
+## Decorator
+https://engineer-mole.tistory.com/181
+
 # 빅데이터를 위한 파이썬
 https://pnavaro.github.io/big-data/14-FileFormats.html
 

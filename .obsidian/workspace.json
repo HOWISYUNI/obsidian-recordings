@@ -8,12 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f35d0840b5dce893",
+            "id": "407afd4b979e8318",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infra/linux 일반.md",
+                "file": "infra/git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "276875957fe20ae5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "infra/vim.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6a86d8ade6284974",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "infra/ssl.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Infra/linux 일반.md",
+                "file": "infra/git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Infra/linux 일반.md",
+                "file": "infra/git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Infra/linux 일반.md"
+                "file": "infra/git.md"
               }
             }
           },
@@ -147,17 +171,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "f35d0840b5dce893",
+  "active": "407afd4b979e8318",
   "lastOpenFiles": [
-    "Infra/SSH key 생성 및 등록.md",
-    "Infra/linux 일반.md",
-    "linux.md",
+    "2022-10-27.md",
+    "DataLake/잡동사니.md",
+    "DataLake/Apache Kafka/test.md",
+    "infra/ssl.md",
+    "infra/vim.md",
+    "infra/linux 일반.md",
     "DataLake/Infra/Jupyter Hub.md",
-    "Language/_Python.md",
-    "Language/Pandas.md",
-    "MLOPS/아키텍쳐.md",
-    "MLOPS/BentoML.md",
-    "계정들.md",
-    "DataLake/Linux SSH key 생성 및 등록.md"
+    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
+    "infra/Docker/Docker.md",
+    "계정들.md"
   ]
 }
