@@ -37,13 +37,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "infra/ssl.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "a54462a048570516",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.3"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -109,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "infra/git.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "infra/git.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "infra/git.md"
+                "file": "DataLake/Apache Kafka/test.md"
               }
             }
           },
@@ -168,20 +179,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "407afd4b979e8318",
+  "active": "a54462a048570516",
   "lastOpenFiles": [
+    "infra/ssl.md",
+    "infra/vim.md",
+    "infra/git.md",
     "2022-10-27.md",
     "DataLake/잡동사니.md",
     "DataLake/Apache Kafka/test.md",
-    "infra/ssl.md",
-    "infra/vim.md",
     "infra/linux 일반.md",
     "DataLake/Infra/Jupyter Hub.md",
     "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
-    "infra/Docker/Docker.md",
-    "계정들.md"
+    "infra/Docker/Docker.md"
   ]
 }
