@@ -2,14 +2,18 @@ linux 이미지 하나 pull 받아서 그 위에서 kafka 바이너리 테스트
 
 전체 명령어 흐름
 ```bash
+# DNS 설정 : 아래로 들어가서 search lottechilsung.co.kr 추가
+vi /etc/resolv.conf
+
 docker pull centos:centos8
 
 # docker pull 오류시, openssl로 docker.io:443 사이트의 ssl 인증서 가져옴
 # 아래 커맨드 해석 : openssl의 s_client를 이용해 docker.io:443에 연결한 뒤 ssl 인증서를 cacert.pem 파일로 가져온다
 openssl s_client -showcerts -servername "docker.io" -connect docker.io:443 > cacert.pem
-
-# DNS 설정 : 아래로 들어가서 search lottechilsung.co.kr 추가
-vi /etc/resolv.conf
+# 인증서 업데이트 해주고
+update-ca-certificates
+# 도커 재시작
+systemctl restart docker
 ```
 
 만약 docker pull이 안된다면 보안에서 막거나 ssl 인증서가 없어서 그럴수도 있음
