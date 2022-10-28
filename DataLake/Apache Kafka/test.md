@@ -24,15 +24,19 @@ docker run -it -p 5005:5005 --name centos centos:centos7
 # 도커 컨테이너 안 환경
 # jdk 설치
 yum install -y java-1.8.0-openjdk-devel.x86_64
+# java 설치 확인
+java -version
 
 # wget 설치
 yum install wget
 
 # kafka binary 설치 https://kafka.apache.org/downloads
-wget https://archive.apache.org/dist/kafka/2.5.0/kafka_2.12-2.5.0.tgz
+wget https://archive.apache.org/dist/kafka/3.0.0/kafka_2.13-3.0.0.tgz
+# 책엔 이 주소(wget https://archive.apache.org/dist/kafka/2.5.0/kafka_2.12-2.5.0.tgz)로 하니까 zookeeper 가 안떠서 2.13 으로 설치
 
 # kafka 압축 해제
-tar xvf kafka_2.12-2.5.0.tgz
+tar xzf kafka_2.13-3.0.0.tgz
+# 책엔 2.12 버전 tar xvf kafka_2.12-2.5.0.tgz
 ```
 
 만약 docker pull이 안된다면 보안에서 막거나 ssl 인증서가 없어서 그럴수도 있음
@@ -49,3 +53,12 @@ dns 세팅은 resolv.conf에서 수행[resolv.conf 참고](https://it-serial.tis
 ![[Pasted image 20221028152327.png]]
 
 # kafka 설정
+# zookeeper, kafka 실행
+```bash
+# 실행 안될 경우 -daemon 빼고 실행시켜서 에러메시지 확인
+# zookeeper 실행
+bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
+
+# kafka 브로커 실행
+bin/kafka-server-start.sh -daemon config/server.properties
+```

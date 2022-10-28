@@ -66,7 +66,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "infra/Docker/Docker.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "infra/Docker/Docker.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "infra/Docker/Docker.md"
+                "file": "DataLake/Apache Kafka/test.md"
               }
             }
           },
@@ -191,10 +191,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6a86d8ade6284974",
+  "active": "facdd595b3b715d1",
   "lastOpenFiles": [
-    "DataLake/Apache Kafka/test.md",
     "infra/Docker/Docker.md",
+    "DataLake/Apache Kafka/test.md",
     "MLOPS/아키텍쳐.md",
     "계정들.md",
     "MLOPS/디자인패턴.md",
