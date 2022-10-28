@@ -185,13 +185,13 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
-  "active": "facdd595b3b715d1",
+  "active": "a6897533a43ddcc4",
   "lastOpenFiles": [
     "MLOPS/아키텍쳐.md",
     "infra/Docker/Docker.md",
