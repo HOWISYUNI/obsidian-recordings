@@ -71,6 +71,8 @@ jps -m
 ```bash
 # 토픽 생성 (필수 옵션만 입력)
 # --bootstrap-server : 기존 zookeeper를 이용한 통신(kafka 2.2까지)에서 탈피해 카프카와 직접 통신
+# partition : 최소 1개
+# replication : 최소 1개 ~ 최대 클러스터 브로커 개수
 bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic hello.kafka --partitions 1 --replication-factor 1
 
 # 토픽 리스트 조회 : --list 옵션
@@ -78,6 +80,19 @@ bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
 
 # 토픽 상세 조회 : --describe 옵션
 bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic hello.kafka
+# 설정 조회
+./bin/kafka-configs.sh --bootstrap-server localhost:9092 --entity-type topics --entity-name hello.kafka --describe
 
+# 토픽 옵션 수정
+# partition 개수 변경 : kafka-topics.sh
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --topic hello.kafka --alter --partitions 4
 
+# 나머지 변경 : kafka-config.sh 86400000ms는 하루
+/kafka-configs.sh --bootstrap-server localhost:9092 --entity-type topics --entity-name hello.kafka --alter --add-config retention.ms=86400000
 ```
+- 토픽 옵션 변경
+파티션 변경
+![[Pasted image 20221028185655.png]]
+retention 변경
+![[Pasted image 20221028185952.png]]
+![[Pasted image 20221028190149.png]]
