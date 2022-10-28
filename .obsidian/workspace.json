@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MLOPS/아키텍쳐.md",
+                "file": "infra/Docker/Docker.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MLOPS/디자인패턴.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,7 +66,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MLOPS/디자인패턴.md",
+                "file": "infra/Docker/Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MLOPS/디자인패턴.md",
+                "file": "infra/Docker/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MLOPS/디자인패턴.md"
+                "file": "infra/Docker/Docker.md"
               }
             }
           },
@@ -191,17 +191,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "a6897533a43ddcc4",
+  "active": "6a86d8ade6284974",
   "lastOpenFiles": [
-    "MLOPS/아키텍쳐.md",
-    "infra/Docker/Docker.md",
     "DataLake/Apache Kafka/test.md",
+    "infra/Docker/Docker.md",
+    "MLOPS/아키텍쳐.md",
+    "계정들.md",
+    "MLOPS/디자인패턴.md",
     "infra/vim.md",
     "infra/git.md",
     "infra/ssl.md",
     "2022-10-27.md",
-    "DataLake/잡동사니.md",
-    "infra/linux 일반.md",
-    "DataLake/Infra/Jupyter Hub.md"
+    "DataLake/잡동사니.md"
   ]
 }
