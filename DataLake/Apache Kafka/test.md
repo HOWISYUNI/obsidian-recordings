@@ -58,7 +58,26 @@ dns 세팅은 resolv.conf에서 수행[resolv.conf 참고](https://it-serial.tis
 # 실행 안될 경우 -daemon 빼고 실행시켜서 에러메시지 확인
 # zookeeper 실행
 bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
+# zookeeper 실행 확인
+jps -vm
 
 # kafka 브로커 실행
 bin/kafka-server-start.sh -daemon config/server.properties
+# kafka 실행 확인
+jps -m
+```
+
+# kafka 커맨드라인 툴
+```bash
+# 토픽 생성 (필수 옵션만 입력)
+# --bootstrap-server : 기존 zookeeper를 이용한 통신(kafka 2.2까지)에서 탈피해 카프카와 직접 통신
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic hello.kafka --partitions 1 --replication-factor 1
+
+# 토픽 리스트 조회 : --list 옵션
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+# 토픽 상세 조회 : --describe 옵션
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic hello.kafka
+
+
 ```
