@@ -89,6 +89,14 @@ bin/kafka-topics.sh --bootstrap-server localhost:9092 --topic hello.kafka --alte
 
 # 나머지 변경 : kafka-config.sh 86400000ms는 하루
 /kafka-configs.sh --bootstrap-server localhost:9092 --entity-type topics --entity-name hello.kafka --alter --add-config retention.ms=86400000
+
+# 레코드(데이터. key:value로 생성) 넣기
+# 키가 null인 데이터로 생성
+bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic hello.kafka
+
+# key:value로 데이터를 생성
+# separator로 : 를 지정. default는 \t(탭)
+bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic hello.kafka --property "parse.key=true" --property "key.separator=:"
 ```
 - 토픽 옵션 변경
 파티션 변경
