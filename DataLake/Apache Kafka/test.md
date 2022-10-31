@@ -97,6 +97,24 @@ bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic hello.ka
 # key:value로 데이터를 생성
 # separator로 : 를 지정. default는 \t(탭)
 bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic hello.kafka --property "parse.key=true" --property "key.separator=:"
+
+# 컨슈머
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello.kafka --from-beginning
+# key-value 로 데이터 소모
+# --group 으로 새로운 컨슈머 그룹 생성
+bin/kafka-console-consumer.sh --bootstrap-sever localhost:9092 --topic hello.kafka --property print.key=true --property key.separator="-" --group hello-group --from-beginning
+
+# 컨슈머 그룹 리스트
+bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+# 특정 컨슈머 그룹 상세 현황 확인
+# CURRENT-OFFSET : 입력된 데이터 양
+# LOG-END-OFFSET : 소모한 데이터 위치
+# LAG : 지연. CURRENT-OFFSET - LOG-END-OFFSET
+# CONSUMER-ID : 컨슈머의 토픽 할당.
+# HOST : 컨슈머가 동작하는 host 명
+bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group hello-group --describe
+
+# ㅠㅑㅜ
 ```
 - 토픽 옵션 변경
 파티션 변경
