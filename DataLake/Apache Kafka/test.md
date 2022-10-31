@@ -114,7 +114,15 @@ bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
 # HOST : 컨슈머가 동작하는 host 명
 bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group hello-group --describe
 
-# ㅠㅑㅜ
+# 네트워크 통신 테스트 용 producer, consumer
+# producer
+bin/kafka-verifiable-producer.sh --bootstrap-server localhost:9092 --max-message 10 --topic verify-test
+# consumer
+bin/kafka-verifiable-consumer.sh --bootstrap-server localhost:9092 --topic verify-test --group-id test-group
+
+# 이미 적재된 토픽 데이터 삭제
+vi delete-topic.json
+bin/kafka-delete-records.sh --bootstrap-server localhost:9092 --offset-json-file delete-topic.json
 ```
 - 토픽 옵션 변경
 파티션 변경
