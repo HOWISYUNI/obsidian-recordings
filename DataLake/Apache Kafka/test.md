@@ -13,7 +13,7 @@ docker pull centos:centos7 # centos8은 yum 이슈로 패키지 다운로드 불
 # 아래 커맨드 해석 : openssl의 s_client를 이용해 docker.io:443에 연결한 뒤 ssl 인증서를 cacert.pem 파일로 가져온다
 openssl s_client -showcerts -servername "docker.io" -connect docker.io:443 > cacert.pem
 # 인증서 업데이트 해주고
-update-ca-certificates
+update-ca-certificates # ubuntu 용
 # 도커 재시작
 systemctl restart docker
 
