@@ -18,7 +18,7 @@ update-ca-certificates # ubuntu 용
 systemctl restart docker
 
 # docker 컨테이너 생성
-docker run -it -p 5005:5005 --name centos centos:centos7
+docker run -it -p 5005:5005 -p 9092:9092 --name centos centos:centos7
 
 #########################################################
 # 도커 컨테이너 안 환경
