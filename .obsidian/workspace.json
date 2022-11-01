@@ -181,15 +181,15 @@
   },
   "active": "6a86d8ade6284974",
   "lastOpenFiles": [
+    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "infra/Docker/Docker.md",
-    "infra/vim.md",
     "DataLake/Apache Kafka/test.md",
+    "infra/vim.md",
     "infra/git.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "Language/Pandas.md",
     "MLOPS/아키텍쳐.md",
     "계정들.md",
-    "MLOPS/디자인패턴.md",
-    "infra/ssl.md"
+    "MLOPS/디자인패턴.md"
   ]
 }

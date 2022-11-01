@@ -140,11 +140,10 @@ retention 변경
 
 # Trouble Shooting
 - Error connecting to node
-1. docker ps 로 port 포워딩 된 ip 정보 확인
-![[Pasted image 20221101200423.png]]
+1. etc/hosts 에 컨테이너 아이디에 맵핑된 ip 확인
+![[Pasted image 20221101212409.png]]
+![[Pasted image 20221101212334.png]]
 2. config/server.properties 의 advertised.listeners 수정
-![[Pasted image 20221101200439.png]]
-3. kafka 컨테이너 재기동
-	1. `docker stop {컨테이너명}`
-	2. `docker start -t {컨테이너명}`
+![[Pasted image 20221101212444.png]]
+3. kafka 서비스 재기동[[#zookeeper, kafka 중지]] [[#zookeeper, kafka 실행]]
 
