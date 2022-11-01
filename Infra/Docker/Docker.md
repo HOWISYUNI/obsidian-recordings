@@ -6,7 +6,7 @@ https://www.daleseo.com/docker-run/
 | 의도                           | 명령어                                                         |
 | ------------------------------ | -------------------------------------------------------------- |
 | 컨테이너 생성 & 시작           | docker run -p {포트:포워딩} --name {컨테이너명} {이미지명:tag} |
-| 컨테이너 시작                  | docker start {옵션} {컨테이너명}                                                               |
+| 컨테이너 시작                  | docker start {옵션} {컨테이너명}                               |
 | 모든 컨테이너 중지             | docker stop $(docker ps -a -q)                                 |
 | 특정 컨테이너 중지             | docker stop {컨테이너명}                                       |
 | 특정 컨테이너 삭제             | docker rm   {컨테이너 ID}                                      |
@@ -15,6 +15,7 @@ https://www.daleseo.com/docker-run/
 | 모든 이미지 삭제               | docker rmi $(docker images -q)                                 |
 | 특정 이미지 삭제               | docker rmi {REPOSITORY}:{TAG}                                  |
 | dangling 이미지 삭제           | docker image prune                                             |
+| 컨테이너 내용 파악             | docker inspect {컨테이너 명}                                                               |
 
 # 주요 명령어
 ## RUN

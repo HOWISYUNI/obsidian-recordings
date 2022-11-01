@@ -66,7 +66,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "infra/Docker/Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "infra/Docker/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md"
+                "file": "infra/Docker/Docker.md"
               }
             }
           },
@@ -191,17 +191,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "facdd595b3b715d1",
+  "active": "3def5e24c0fc2b46",
   "lastOpenFiles": [
-    "infra/Docker/Docker.md",
     "DataLake/Apache Kafka/test.md",
+    "DataLake/hadoop ecosystem/Hive/HiveQL.md",
+    "Language/Pandas.md",
+    "infra/Docker/Docker.md",
     "MLOPS/아키텍쳐.md",
     "계정들.md",
     "MLOPS/디자인패턴.md",
     "infra/vim.md",
     "infra/git.md",
-    "infra/ssl.md",
-    "2022-10-27.md",
-    "DataLake/잡동사니.md"
+    "infra/ssl.md"
   ]
 }
