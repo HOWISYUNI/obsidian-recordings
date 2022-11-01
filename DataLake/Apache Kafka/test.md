@@ -66,6 +66,12 @@ bin/kafka-server-start.sh -daemon config/server.properties
 # kafka 실행 확인
 jps -m
 ```
+## zookeeper, kafka 중지
+```bash
+bin/kafka-server-stop.sh
+
+bin/zookeeper-server-stop.sh
+```
 
 # kafka 커맨드라인 툴
 ```bash
