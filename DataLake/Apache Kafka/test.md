@@ -27,6 +27,9 @@ yum install -y java-1.8.0-openjdk-devel.x86_64
 # java 설치 확인
 java -version
 
+# tcpdump 설치
+yum install tcpdump
+
 # wget 설치
 yum install wget
 

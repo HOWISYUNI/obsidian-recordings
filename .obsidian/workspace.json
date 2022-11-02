@@ -47,9 +47,11 @@
             "id": "a54462a048570516",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.0.3"
+                "file": "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -181,9 +183,9 @@
   },
   "active": "6a86d8ade6284974",
   "lastOpenFiles": [
+    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "infra/Docker/Docker.md",
     "DataLake/Apache Kafka/test.md",
-    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "infra/vim.md",
     "infra/git.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
