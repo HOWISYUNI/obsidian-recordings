@@ -150,7 +150,7 @@ retention 변경
 ![[Pasted image 20221101212444.png]]
 3. kafka 서비스 재기동[[#zookeeper, kafka 중지]] [[#zookeeper, kafka 실행]]
 
-- 네트워크 이슈 없는지 확인
+- 네트워크 이슈 없는지 확인 = tcpdump 찍기[출처](https://mkil.tistory.com/482)
 1. 머신 ip로 패킷이 들어오는지 확인
 2. 도커 컨테이너로 패킷이 들어오는지 확인
 ```bash
