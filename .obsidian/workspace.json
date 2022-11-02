@@ -183,9 +183,9 @@
   },
   "active": "6a86d8ade6284974",
   "lastOpenFiles": [
-    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "infra/Docker/Docker.md",
     "DataLake/Apache Kafka/test.md",
+    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "infra/vim.md",
     "infra/git.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",

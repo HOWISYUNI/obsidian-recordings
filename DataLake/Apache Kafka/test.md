@@ -150,3 +150,11 @@ retention 변경
 ![[Pasted image 20221101212444.png]]
 3. kafka 서비스 재기동[[#zookeeper, kafka 중지]] [[#zookeeper, kafka 실행]]
 
+- 네트워크 이슈 없는지 확인
+1. 머신 ip로 패킷이 들어오는지 확인
+2. 도커 컨테이너로 패킷이 들어오는지 확인
+```bash
+tcpdump host {ip} # 이 아이피로 들어오거나 나가는 패킷 모두 리스닝
+tcpdump port {port} # 이 포트로 들어오거나 나간느 패킷 모두 리스닝
+tcpdump dst port {port} # 이 포트로 들어오는 패킷 모두 리스닝
+```
