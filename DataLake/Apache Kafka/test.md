@@ -143,12 +143,10 @@ retention 변경
 
 # Trouble Shooting
 - Error connecting to node
-1. etc/hosts 에 컨테이너 아이디에 맵핑된 ip 확인
-![[Pasted image 20221101212409.png]]
-![[Pasted image 20221101212334.png]]
-2. config/server.properties 의 advertised.listeners 수정
-![[Pasted image 20221101212444.png]]
-3. kafka 서비스 재기동[[#zookeeper, kafka 중지]] [[#zookeeper, kafka 실행]]
+1. config/server.properties 의 advertised.listeners 수정
+로컬 머신의 ip로 배포해야 클라이언트에서 연결 가능하다
+![[Pasted image 20221102171005.png]]
+2. kafka 서비스 재기동[[#zookeeper, kafka 중지]] [[#zookeeper, kafka 실행]]
 
 - 네트워크 이슈 없는지 확인 = tcpdump 찍기[출처](https://mkil.tistory.com/482)
 1. 머신 ip로 패킷이 들어오는지 확인
@@ -158,3 +156,51 @@ tcpdump host {ip} # 이 아이피로 들어오거나 나가는 패킷 모두 리
 tcpdump port {port} # 이 포트로 들어오거나 나간느 패킷 모두 리스닝
 tcpdump dst port {port} # 이 포트로 들어오는 패킷 모두 리스닝
 ```
+
+- 메시지가 안들어감
+상황
+로컬에서 `bin/kafka-broker-api-versions.sh --bootstrap-server 10.121.117.175:9092`도 오류나고
+![[Pasted image 20221102171420.png]]
+클라이언트 자바 프로그램에서도 메시지가 안들어감(얘는 인텔리제이 콘솔상 성공이랑 실패 로그는 같은데, 성공일때는 프로세스가 호다닥 끝나고, 실패일때는 타임아웃때까지 프로세스가 실행됨)
+근데 토픽 이름 바꾸고 자바프로그램 실행시키면 서버에 토픽은 만들어짐.. 뭐지
+[갓플루언트 참고문서](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
+![[Pasted image 20221102171136.png]]
+![[Pasted image 20221102171352.png]]
+클라이언트와의 연결은 아래와 같다
+![[Pasted image 20221102171609.png]]
+![[Pasted image 20221102171855.png]]
+![[Pasted image 20221102171946.png]]
+계속 연결이 힘들었던건 아래와 같은 이유때문이다
+config/server.properties에 선언된 ip가 클라이언트에서는 연결할 수 없는 주소였기때문
+![[Pasted image 20221102172025.png]]
+
+삽질하는 동안 `advertised.listener`는 아래와 같았다
+![[Pasted image 20221101212444.png]]
+`docker inspect {컨테이너}` 일 때 ip는 172.17.0.2였고, 내 생각으로는 도커의 ip를 리턴해줘야 클라이언트에서 연결될 수 있다고 생각한거였다
+![[Pasted image 20221102172629.png]]
+모식도는 위와 같으며, 클라이언트에서 `10.121.117.175:9092`로 패킷을 보내면, 포트포워딩 된 9092 포트를 통해 카프카 컨테이너로 패킷이 전송되는 구조다. 다만, 머신 내에서 컨테이너를 식별할 수 있는 주소는 `172.17.0.2` 이다.
+트러블 슈팅을 위해서 생각한건 아래 순서였다
+1. LCSASMDL로 패킷이 가는지
+2. 컨테이너 안으로 패킷이 가는지
+3. 패킷이 간다면 왜 메시지가 등록 안되는건지 -> 무조건 세팅 잘못이다
+
+1. LCSASMDL로 패킷 가는지 확인
+: 머신 위에서 `tcpdump dst port 9092` 로 모니터링하니 `bin/kafka-broker-api-versions.sh --bootstrap-server 10.121.117.175:9092` 실행 시 반응 있다 = 서버로 패킷 간다
+ 2. 컨테이너 안으로 패킷이 가는지
+: 컨테이너 안에서 `tcpdump dst port 9092` 로 모니터링 + `bin/kafka-broker-api-versions.sh --bootstrap-server 10.121.117.175:9092` 실행시 반응 있다 = 컨테이너로 패킷 간다
+ 3. 세팅 뭐가 잘못이지?
+	 1. 모든 문서봐도 클라이언트로의 연결은 `advertised.listener` 가 정한다고 말함
+	 2. 와중에 갓플루언트 설명 찾음
+`advertised.listener` 가 잘못 설정되면 아래와 같은 상황이 펼쳐진다
+대표적으로, `advertised.listener` 를 세팅하지 않고 클라이언트를 붙일경우 브로커는 `localhost:9092` 를 리턴하고, 클라이언트는 루프백으로 자신 안에서 9092 포트 서비스를 찾게된다.
+![[Pasted image 20221102173208.png]]
+![[Pasted image 20221102173216.png]]
+![[Pasted image 20221102173226.png]]
+이처럼, 나는 `advertised.listener`를 컨테이너의 ip인 `172.17.0.2:9092`로 설정해놨고, 클라이언트 연결 시 브로커 주소를 연결가능한 주소인 LCSASMDL의 주소 `10.121.117.175:9092`이 아니라 `172.17.0.2:9092` 로 받게되므로 연결, 메시지를 등록하지 못했던것이다.
+
+그래서 결국 내가 해줘야 할 거는 `advertised.listener`를 머신 ip인 `10.121.117.175:9092`로 세팅해주고 카프카를 띄우면 되는거였다.
+그러니까
+1. 카프카 메타데이터 요청도 잘 됐고
+![[Pasted image 20221102173654.png]]
+2. 클라이언트 프로그램에서 메시지도 잘 들어갔다 (성공이나 실패시 로그는 같지만, 성공하면 프로세스가 호다닥 끝난다)
+![[Pasted image 20221102173745.png]]
