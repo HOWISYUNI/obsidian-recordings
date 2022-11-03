@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "DataLake/hadoop ecosystem/HDFS/General.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "DataLake/hadoop ecosystem/HDFS/General.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "DataLake/hadoop ecosystem/HDFS/General.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md"
+                "file": "DataLake/hadoop ecosystem/HDFS/General.md"
               }
             }
           },
@@ -175,16 +175,16 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6a86d8ade6284974",
+  "active": "a6897533a43ddcc4",
   "lastOpenFiles": [
-    "infra/Docker/Docker.md",
     "DataLake/Apache Kafka/test.md",
+    "infra/Docker/Docker.md",
     "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "infra/vim.md",
     "infra/git.md",

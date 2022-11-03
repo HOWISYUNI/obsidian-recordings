@@ -6,10 +6,10 @@ hadoop fs -ls /user/ # hdfs write 가능한 계정 리스트
 ```
 ![[Pasted image 20220929150541.png]]
 # 빅데이터를 위한 binary 파일 포맷 = csv는 쓰지 않는게 좋다
-| 포맷    | 장점                                      | 단점 | 특징                                      |
-| ------- | ----------------------------------------- | ---- | ----------------------------------------- |
-| Feather | 빠른 READ, WRITE, CPU, 메모리 성능                |      | 단기 보관용 데이터 포맷. 주피터 IO에 적합                   | 
-| Parquet | 준수한 READ, WRITE, CPU, 메모리 성능  |      | 대량, 장기 보관용. HADOOP, SPARK 에 적합 |
+| 포맷    | 장점                                 | 특징                                      |
+| ------- | ------------------------------------ | ----------------------------------------- |
+| Feather | 빠른 READ, WRITE, CPU, 메모리 성능   | 단기 보관용 데이터 포맷. 주피터 IO에 적합 |   
+| Parquet | 준수한 READ, WRITE, CPU, 메모리 성능 | 대량, 장기 보관용. HADOOP, SPARK 에 적합  |   
 ![[Pasted image 20220908151335.png]]
 ## 퍼포먼스 비교
 [출처](https://towardsdatascience.com/the-best-format-to-save-pandas-data-414dca023e0d)
