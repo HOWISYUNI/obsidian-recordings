@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "계정들.md"
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md"
               }
             }
           },
@@ -183,6 +183,7 @@
   },
   "active": "6a86d8ade6284974",
   "lastOpenFiles": [
+    "계정들.md",
     "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "DataLake/Apache Kafka/test.md",
     "DataLake/hadoop ecosystem/HDFS/General.md",
@@ -191,7 +192,6 @@
     "infra/git.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "Language/Pandas.md",
-    "MLOPS/아키텍쳐.md",
-    "계정들.md"
+    "MLOPS/아키텍쳐.md"
   ]
 }

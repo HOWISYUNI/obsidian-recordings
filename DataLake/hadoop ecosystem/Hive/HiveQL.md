@@ -43,6 +43,11 @@ LOCATION '/path/to/your/data' -- INSERT 수행 시 데이터가 쌓이는 위치
 ![[Pasted image 20220928143142.png]]
 ![[Pasted image 20220928143151.png]]
 
+## CHANGE EXTERNAL LOCATION
+![[Pasted image 20221110122709.png]]
+```SQL
+ALTER TABLE ods.ext_pos_ltmart_liq_sale SET LOCATION "hdfs://csdlnn01:8020/ODS/PROD/EXTERNAL/POS/BW/MART/LIQ/SALES"
+```
 # SHOW PARTITIONS
 # DESCRIBE
 # GROUP
