@@ -1,6 +1,6 @@
 linux 이미지 하나 pull 받아서 그 위에서 kafka 바이너리 테스트
 
-# 설치
+# kafka(+connect)설치
 명령어 흐름
 ```bash
 # DNS 설정 : 아래로 들어가서 search lottechilsung.co.kr 추가
@@ -19,6 +19,9 @@ systemctl restart docker
 
 # docker 컨테이너 생성
 docker run -it -p 5005:5005 -p 9092:9092 --name centos centos:centos7
+
+# kafka connect 컨테이너 생성 할 땐 아래 명령어
+docker run -it -p 8083:8083 --name kafka-connect centos:centos7
 
 #########################################################
 # 도커 컨테이너 안 환경
