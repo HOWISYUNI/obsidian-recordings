@@ -36,3 +36,13 @@ docker run (<옵션>) <이미지 식별자> (<명령어>) (<인자>)
 
 ## Docker File
 
+# 해결
+## 이미있는 컨테이너에 새 볼륨을 마운트하고싶어요
+[출처](https://stackoverflow.com/questions/28302178/how-can-i-add-a-volume-to-an-existing-docker-container)
+1.지금 컨테이너를 이미지로 만들고, 그 이미지에 볼륨을 마운트해서 다시 컨테이너로 동작시켜라
+![[Pasted image 20221112163733.png]]
+2.호스트 경로를 컨테이너로 복사
+![[Pasted image 20221112163923.png]]
+3.컨테이너를 중지 -> 설정을 직접 변경 -> 컨테이너 재시작
+![[Pasted image 20221112164026.png]]
+
