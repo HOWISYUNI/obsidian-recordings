@@ -148,6 +148,10 @@ retention 변경
 ![[Pasted image 20221028185952.png]]
 ![[Pasted image 20221028190149.png]]
 
+# 단일모드 Kafka Connect
+
+
+
 
 # Trouble Shooting
 - Error connecting to node

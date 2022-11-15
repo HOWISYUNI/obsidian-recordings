@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "infra/Docker/Docker.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6b41083d7649f901",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "infra/Docker/Buildx 삽질기.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "infra/Docker/Docker.md",
                 "mode": "source",
                 "source": false
               }
@@ -121,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "infra/Docker/Docker.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "infra/Docker/Docker.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "infra/Docker/Docker.md"
+                "file": "DataLake/Apache Kafka/test.md"
               }
             }
           },
@@ -182,9 +170,9 @@
   },
   "active": "407afd4b979e8318",
   "lastOpenFiles": [
-    "infra/Docker/Buildx 삽질기.md",
     "infra/Docker/Docker.md",
     "DataLake/Apache Kafka/test.md",
+    "infra/Docker/Buildx 삽질기.md",
     "infra/git.md",
     "().md",
     "infra/linux 일반.md",
