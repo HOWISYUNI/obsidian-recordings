@@ -68,6 +68,8 @@ docker run -v 'pwd':/app ...
 
 ## Docker File
 
+## 포트포워딩 개념
+https://tttsss77.tistory.com/155
 
 # 해결
 ## 이미있는 컨테이너에 새 볼륨을 마운트하고싶어요
@@ -78,4 +80,40 @@ docker run -v 'pwd':/app ...
 ![[Pasted image 20221112163923.png]]
 3.컨테이너를 중지 -> 설정을 직접 변경 -> 컨테이너 재시작
 ![[Pasted image 20221112164026.png]]
+
+## 도커 서비스 재시작 했는데...
+### 도커 서비스가 안올라와요...
+`systemctl restart docker.service` 했는데 아래와 같은 에러 메시지 출력
+```bash
+Job for docker.service failed because the control process exited with error code.
+See "systemctl status docker.service" and "journalctl -xe" for details.
+```
+대충 내용은 불완전하게 도커 서비스가 종료돼서 재시작 할 수 없다는거다
+짐작하기로는, 원래 돌아가던 컨테이너를 안내리고 바로 `systemctl restart docker.service`하니까 원래 돌던 컨테이너가 불완전하게 죽은거같다.
+그래서 에러메시지대로 `systemctl status docker.service`를 찍어 에러메시지를 좀 봤다.
+내 경우에서는 에러메시지가 출력되지는 않았지만, 구글링해본결과 이런 해결방법이 있었다([출처](https://dct-wonjung.tistory.com/entry/Docker-failed-control-process-exited-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0))
+1. 도커 restart 설정 변경
+![[Pasted image 20221114185149.png]]
+2. 도커 데몬 프로세스 kill
+데몬 재실행하니 대충 아래와 비슷한 에러메시지였다
+```bash
+$ systemctl status docker.service
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Wed 2021-11-24 17:42:37 KST; 2s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+    Process: 5648 ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock (code=exited, status=1/FAILURE)
+   Main PID: 5648 (code=exited, status=1/FAILURE)
+ 
+11월 24 17:42:37 jungyeunwon-B365M-D3H systemd[1]: Starting Docker Application Container Engine...
+11월 24 17:42:37 jungyeunwon-B365M-D3H dockerd[5648]: time="2021-11-24T17:42:37.811937480+09:00" level=info msg="Starting up"
+11월 24 17:42:37 jungyeunwon-B365M-D3H dockerd[5648]: failed to start daemon: pid file found, ensure docker is not running or delete /var/run/docker.pid
+11월 24 17:42:37 jungyeunwon-B365M-D3H systemd[1]: docker.service: Main process exited, code=exited, status=1/FAILURE
+11월 24 17:42:37 jungyeunwon-B365M-D3H systemd[1]: docker.service: Failed with result 'exit-code'.
+11월 24 17:42:37 jungyeunwon-B365M-D3H systemd[1]: Failed to start Docker Application Container Engine.
+
+```
+세번째 에러메시지를 보니 docker 프로세스가 확실히 죽었는지 확인하란다 (pid file found, ensure docker is not running or delete /var/run/docker.pid)
+![[Pasted image 20221114185224.png]]
 

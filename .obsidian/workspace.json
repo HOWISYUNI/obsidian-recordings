@@ -13,19 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "infra/git.md",
+                "file": "infra/Docker/Docker.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "276875957fe20ae5",
+            "id": "6b41083d7649f901",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "infra/Docker/Docker.md",
+                "file": "infra/Docker/Buildx 삽질기.md",
                 "mode": "source",
                 "source": false
               }
@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -181,17 +180,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "276875957fe20ae5",
+  "active": "407afd4b979e8318",
   "lastOpenFiles": [
-    "DataLake/Apache Kafka/test.md",
+    "infra/Docker/Buildx 삽질기.md",
     "infra/Docker/Docker.md",
+    "DataLake/Apache Kafka/test.md",
+    "infra/git.md",
+    "().md",
     "infra/linux 일반.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "계정들.md",
     "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
-    "DataLake/hadoop ecosystem/HDFS/General.md",
-    "infra/vim.md",
-    "infra/git.md",
-    "Language/Pandas.md"
+    "DataLake/hadoop ecosystem/HDFS/General.md"
   ]
 }
