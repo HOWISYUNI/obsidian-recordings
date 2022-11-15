@@ -148,7 +148,24 @@ retention 변경
 ![[Pasted image 20221028185952.png]]
 ![[Pasted image 20221028190149.png]]
 
-# 단일모드 Kafka Connect
+# 분산모드 Kafka Connect
+```bash
+# 2대 이상의 connect 서버 
+# 각 서버당 1개의 분산모드 커넥트 실행 권장
+# connect 컨테이너를 만들고 그 서버 위에 커넥트 프로세스 실행함
+
+# 1. config/connect-distributed.properties 수정
+bootstrap.servers=10.121.117.175:9092
+...
+plugin.path=/app # 개발된 connector jar의 경로
+
+# 2. connector jar 추가
+
+
+# 3. distributed kafka connect 실행
+bin/connect-distributed.sh config/connect-distributed.properties
+```
+
 
 
 

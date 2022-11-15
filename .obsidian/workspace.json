@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "itertuple",
+                "query": "tcpdump",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +89,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -168,7 +169,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "407afd4b979e8318",
+  "active": "b76da68006098587",
   "lastOpenFiles": [
     "infra/Docker/Docker.md",
     "DataLake/Apache Kafka/test.md",
