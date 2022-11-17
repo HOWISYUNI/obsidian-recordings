@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
+                "file": "infra/linux 일반.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tcpdump",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,8 +89,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -169,17 +168,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b76da68006098587",
+  "active": "a6897533a43ddcc4",
   "lastOpenFiles": [
-    "infra/Docker/Docker.md",
+    "infra/linux 일반.md",
+    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "DataLake/Apache Kafka/test.md",
+    "infra/Docker/Docker.md",
     "infra/Docker/Buildx 삽질기.md",
     "infra/git.md",
     "().md",
-    "infra/linux 일반.md",
     "DataLake/hadoop ecosystem/Hive/HiveQL.md",
     "계정들.md",
-    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "DataLake/hadoop ecosystem/HDFS/General.md"
   ]
 }
