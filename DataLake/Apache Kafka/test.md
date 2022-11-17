@@ -1,6 +1,10 @@
 linux 이미지 하나 pull 받아서 그 위에서 kafka 바이너리 테스트
+도움받은 문서들
+[Confluent Developer Documentaion](https://docs.confluent.io/home/overview.html)
+[Confluent blog](https://www.confluent.io/blog/)
 
-# kafka(+connect)설치
+# Kafka Broker
+## 설치 (broker, connect)
 명령어 흐름
 ```bash
 # DNS 설정 : 아래로 들어가서 search lottechilsung.co.kr 추가
@@ -63,8 +67,8 @@ dns 세팅은 resolv.conf에서 수행[resolv.conf 참고](https://it-serial.tis
 완료됐다면
 ![[Pasted image 20221028152327.png]]
 
-# kafka 설정
-# zookeeper, kafka 실행
+## 설정
+## zookeeper, kafka 실행
 ```bash
 # 실행 안될 경우 -daemon 빼고 실행시켜서 에러메시지 확인
 # zookeeper 실행
@@ -84,7 +88,7 @@ bin/kafka-server-stop.sh
 bin/zookeeper-server-stop.sh
 ```
 
-# kafka 커맨드라인 툴
+## kafka 커맨드라인 툴
 ```bash
 # 토픽 생성 (필수 옵션만 입력)
 # --bootstrap-server : 기존 zookeeper를 이용한 통신(kafka 2.2까지)에서 탈피해 카프카와 직접 통신
@@ -148,7 +152,16 @@ retention 변경
 ![[Pasted image 20221028185952.png]]
 ![[Pasted image 20221028190149.png]]
 
-# 분산모드 Kafka Connect
+## 개념
+- 토픽 데이터는 어디에 저장되나요?
+`config/server.properties` 의 `log.dir` 에 정의된 위치에 로그파일로 쌓임 (default = tmp/kafka-log)
+![[Pasted image 20221117211654.png]]
+- 토픽 데이터는 얼마나 오래 보관되나요?
+`config/server.properties` 의 `log.retention.hours` 에 정의된 시간만큼 보유 (default = 7일)
+![[Pasted image 20221117211803.png]]
+# Kafka Connect
+[confluent  Kafka Connect 공식문서](https://docs.confluent.io/kafka-connectors/self-managed/userguide.html#connect_configuring_workers)
+## 분산모드 kafka connect
 ```bash
 # 2대 이상의 connect 서버 
 # 각 서버당 1개의 분산모드 커넥트 실행 권장
@@ -162,12 +175,41 @@ plugin.path=/app # 개발된 connector jar의 경로
 # 2. connector jar 추가
 
 
-# 3. distributed kafka connect 실행
+# 3. distributed kafka connect worker 실행
 bin/connect-distributed.sh config/connect-distributed.properties
 ```
 
+## JDBC Connector
+JDBC를 이용해 RDB 데이터를 kafka로 이동시킬 때 필요한 커넥터
+1 ~ 3 과정은 [이 블로그](https://cjw-awdsd.tistory.com/53) 에서 도움 많이 받았고
+이후 나머지 과정은 [이 블로그](https://sup2is.github.io/2020/06/08/kafka-connect-example.html) 에서 도움 받았다
+개괄적인 이해에 관한 내용은 [Confluent 블로그](https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/#no-suitable-driver-found) 에 설명이 잘 돼있다
+
+1. confluent JDBC Connector [다운로드](https://www.confluent.io/hub/confluentinc/kafka-connect-jdbc) [소스코드](https://github.com/confluentinc/kafka-connect-jdbc)[Confluent 공식문서](https://docs.confluent.io/kafka-connectors/jdbc/current/index.html#jdbc-connector-source-and-sink-for-cp) 
+2. ZIP으로 받았을 경우 원하는 경로로 unzip
+3. [kafka connect 서버] `{kafka 경로}/config/connect-distributed.properties` 의 `plugin.path` 를 `{confluent kafka connector}/lib` 으로 세팅
+![[Pasted image 20221117205158.png]]
+위 상황은 confluent JDBC Connector가 `/app/plugins/confluentinc-kafka-connect-jdbc-10.6.0-custom/` 에 압축 풀린상태로 있고, `/app/plugins/confluentinc-kafka-connect-jdbc-10.6.0-custom/lib` 에 JDBC connector가 구현된 jar가 있어 그곳을 kafka connect 프로세스가 바라보도록 함
+![[Pasted image 20221117205527.png]]
+4. [kafka connect 서버] 소스 RDB에 연결가능한 JDBC jar를 `{kafka 경로}/libs/` 하위로 이동
+연결에 필요한 JDBC jar는 kafka 바이너리가 있는 경로에다가 옮겨야한다.(주의!!!)
+처음에는 jdbc를 confluent kafka connector의 lib에 넣어서 삽질을 좀 했는데 아니고 꼭 apache kafka 바이너리가 있는 경로의 libs에 넣어야한다
+나의 경우 kafka-connect 컨테이너의 `/kafka_2.13-3.0.0/libs` 하위에 JDBC jar를 추가했다
+![[Pasted image 20221117205855.png]]
+5. 분산모드 kafka connect worker 실행
+`bin/connect-distributed.sh config/connect-distributed.properties`
+6. [어느곳에서든] kafka connect 서버 떴는지 `GET` 메서드로 확인 : `curl -X GET 10.121.117.175:8083`
+curl 명령어로 요청하면 아래 사진같을거고
+![[Pasted image 20221117205927.png]]
+postman에서 확인해도 된다.
+7. [어느곳에서든] 적절한 source connector property로 `POST` 수행해 소스 커넥트 등록
+![[Pasted image 20221117205009.png]]
+
+### 커넥터 설정(Configuration Properties)
+[confluent 문서](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#jdbc-source-connector-configuration-properties)
 
 
+## Connector De
 
 
 # Trouble Shooting

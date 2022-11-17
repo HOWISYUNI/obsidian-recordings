@@ -43,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "infra/linux 일반.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "infra/linux 일반.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md"
+                "file": "infra/linux 일반.md"
               }
             }
           },
@@ -166,14 +167,14 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
-  "active": "a6897533a43ddcc4",
+  "active": "a54462a048570516",
   "lastOpenFiles": [
-    "infra/linux 일반.md",
-    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
-    "DataLake/Apache Kafka/test.md",
     "infra/Docker/Docker.md",
+    "infra/linux 일반.md",
+    "DataLake/Apache Kafka/test.md",
+    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "infra/Docker/Buildx 삽질기.md",
     "infra/git.md",
     "().md",

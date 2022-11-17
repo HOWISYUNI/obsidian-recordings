@@ -20,7 +20,9 @@ https://www.daleseo.com/docker-run/
 | 볼륨 생성                      | docker volume create {볼륨 명}                                 |
 | 볼륨 내용 확인                 | docker volume inspect {볼륨 명}                                |
 | 볼륨 리스트 확인               | docker volume ls                                               |
-| 볼륨 삭제                      | docker volume rm {볼륨 명}                                                               |
+| 볼륨 삭제                      | docker volume rm {볼륨 명}                                     |
+| 파일 복사 (host -> container)  | docker cp {hostFilePath} {컨테이너명}:{컨테이너 내 경로}       |
+
 
 
 # 주요 개념 & 명령어
