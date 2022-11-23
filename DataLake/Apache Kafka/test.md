@@ -222,14 +222,20 @@ docker volume create pgdata
 # 컨테이너 백그라운드 동작
 docker run -p 5432:5432 --name postgresql -e POSTGRES_PASSWORD=postgresql -e TZ=Asia/Seoul -v pgdata:/var/lib/postgresql/data -d postgres:14.6
 
+# (안해줘도됨)PostgreSQL URL 설정. 외부 DB에 연결하기 위해 URL 설정
+export DB_URL = 'postgresql://postgres:postgresql@IP:5432/postgres'
+
+
+
+
 # 컨테이너 내부 진입 후 DB 쉘 동작
 psql -U postgres
 
 # DB 리스트 확인
 postgres=# \l
 
-# PostgreSQL URL 설정. 외부 DB에 연결하기 위해 URL 설정
-
+# USER 생성. default는 NOSUPERUSER, NOCREATEDB, NOCREATEUSER
+create user ansung password 'ansung'
 ```
 
 # Trouble Shooting
