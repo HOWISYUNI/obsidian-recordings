@@ -43,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "infra/linux 일반.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "infra/linux 일반.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "infra/linux 일반.md"
+                "file": "DataLake/Apache Kafka/test.md"
               }
             }
           },
@@ -167,9 +166,9 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 317.5
   },
-  "active": "a54462a048570516",
+  "active": "407afd4b979e8318",
   "lastOpenFiles": [
     "infra/Docker/Docker.md",
     "infra/linux 일반.md",

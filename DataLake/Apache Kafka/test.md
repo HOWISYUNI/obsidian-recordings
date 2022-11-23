@@ -212,6 +212,17 @@ postman에서 확인해도 된다.
 ## Connector De
 
 
+
+# Postgresql
+중계용 DB
+```bash
+# 데이터 마운트 용 볼륨 설정
+docker volume create pgdata
+
+# 컨테이너 백그라운드 동작
+docker run -p 5432:5432 --name postresql -e POSTGRES_PASSWORD=postgresql -e TZ=Asia/Seoul -v pgdata:/var/lib/postgresql/data -d postgres:14.6
+```
+
 # Trouble Shooting
 - Error connecting to node
 1. config/server.properties 의 advertised.listeners 수정
