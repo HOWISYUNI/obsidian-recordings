@@ -229,13 +229,20 @@ export DB_URL = 'postgresql://postgres:postgresql@IP:5432/postgres'
 
 
 # 컨테이너 내부 진입 후 DB 쉘 동작
+# super user : postgre / postgresql
 psql -U postgres
 
 # DB 리스트 확인
 postgres=# \l
 
-# USER 생성. default는 NOSUPERUSER, NOCREATEDB, NOCREATEUSER
+# super user로 DB 생성
+CREATE DATABASE ansung_relay
+
+# dbeaver에서 USER 생성. default는 NOSUPERUSER, NOCREATEDB, NOCREATEUSER
+# ansung 계정으로 ansung_relay에 테이블 생성 시 그 테이블에만 권한 들어감
 create user ansung password 'ansung'
+
+
 ```
 
 # Trouble Shooting
