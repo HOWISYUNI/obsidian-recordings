@@ -141,6 +141,9 @@ bin/kafka-verifiable-producer.sh --bootstrap-server localhost:9092 --max-message
 # consumer
 bin/kafka-verifiable-consumer.sh --bootstrap-server localhost:9092 --topic verify-test --group-id test-group
 
+# 토픽 삭제
+bin/kafka-topics.sh --delete --bootstrap-server localhost:9092 --topic example_mssql_topic_XSCADA_ALARM_LOG
+
 # 이미 적재된 토픽 데이터 삭제
 vi delete-topic.json
 bin/kafka-delete-records.sh --bootstrap-server localhost:9092 --offset-json-file delete-topic.json
