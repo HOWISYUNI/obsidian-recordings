@@ -159,6 +159,8 @@ retention 변경
 - 토픽 데이터는 얼마나 오래 보관되나요?
 `config/server.properties` 의 `log.retention.hours` 에 정의된 시간만큼 보유 (default = 7일)
 ![[Pasted image 20221117211803.png]]
+
+
 # Kafka Connect
 [confluent  Kafka Connect 공식문서](https://docs.confluent.io/kafka-connectors/self-managed/userguide.html#connect_configuring_workers)
 ## 분산모드 kafka connect
