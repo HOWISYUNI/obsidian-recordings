@@ -27,10 +27,10 @@ systemctl restart docker
 docker volume create kafka-vol
 
 # docker 컨테이너 생성
-docker run -it -p 5005:5005 -p 9092:9092 -v kafka-vol:/app --name centos centos:centos7
+docker run -it -p 5005:5005 -p 9092:9092 -d -v kafka-vol:/app --name centos centos:centos7
 
 # kafka connect 컨테이너 생성 할 땐 아래 명령어
-docker run -it -p 8083:8083 -v kafka-vol:/app --name kafka-connect centos:centos7
+docker run -it -p 8083:8083 -v kafka-vol:/app -d --name kafka-connect centos:centos7
 
 #########################################################
 # 도커 컨테이너 안 환경
