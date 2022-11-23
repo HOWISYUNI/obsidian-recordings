@@ -174,8 +174,6 @@ retention 변경
 
 # 1. config/connect-distributed.properties 수정
 bootstrap.servers=10.121.117.175:9092
-...
-plugin.path=/app # 개발된 connector jar의 경로
 
 # 2. connector jar 추가
 
