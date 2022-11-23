@@ -68,6 +68,10 @@ dns 세팅은 resolv.conf에서 수행[resolv.conf 참고](https://it-serial.tis
 ![[Pasted image 20221028152327.png]]
 
 ## 설정
+```bash
+# advertised listener 설정
+config/server.properties = 
+```
 ## zookeeper, kafka 실행
 ```bash
 # 실행 안될 경우 -daemon 빼고 실행시켜서 에러메시지 확인
