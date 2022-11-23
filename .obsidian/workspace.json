@@ -171,8 +171,8 @@
   "active": "407afd4b979e8318",
   "lastOpenFiles": [
     "infra/Docker/Docker.md",
-    "infra/linux 일반.md",
     "DataLake/Apache Kafka/test.md",
+    "infra/linux 일반.md",
     "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "infra/Docker/Buildx 삽질기.md",
     "infra/git.md",
