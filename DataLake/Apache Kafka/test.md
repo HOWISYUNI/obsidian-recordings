@@ -194,11 +194,13 @@ JDBC를 이용해 RDB 데이터를 kafka로 이동시킬 때 필요한 커넥터
 
 1. confluent JDBC Connector [다운로드](https://www.confluent.io/hub/confluentinc/kafka-connect-jdbc) [소스코드](https://github.com/confluentinc/kafka-connect-jdbc)[Confluent 공식문서](https://docs.confluent.io/kafka-connectors/jdbc/current/index.html#jdbc-connector-source-and-sink-for-cp) 
 2. ZIP으로 받았을 경우 원하는 경로로 unzip
-3. [kafka connect 서버] `{kafka 경로}/config/connect-distributed.properties` 의 `plugin.path` 를 `{confluent kafka connector}/lib` 으로 세팅
+3. [jdbc connector를 kafka connect의 plugin으로 등록]`{kafka 경로}/config/connect-distributed.properties` 의 `plugin.path` 를 `{confluent kafka connector}/lib` 으로 세팅
 ![[Pasted image 20221117205158.png]]
 위 상황은 confluent JDBC Connector가 `/app/plugins/confluentinc-kafka-connect-jdbc-10.6.0-custom/` 에 압축 풀린상태로 있고, `/app/plugins/confluentinc-kafka-connect-jdbc-10.6.0-custom/lib` 에 JDBC connector가 구현된 jar가 있어 그곳을 kafka connect 프로세스가 바라보도록 함
 ![[Pasted image 20221117205527.png]]
-4. [kafka connect 서버] 소스 RDB에 연결가능한 JDBC jar를 `{kafka 경로}/libs/` 하위로 이동
+아래 jdbc는 jdbc connector 구동할때 안쓰이는것 같고, 실제로 사용되는 jdbc들은 다음 단계의 `libs`아래의 jar들을 사용함
+
+4. [jdbc connector 구동에 필요한 jdbc jar 추가] 소스 RDB에 연결가능한 JDBC jar를 `{kafka 경로}/libs/` 하위로 이동
 연결에 필요한 JDBC jar는 kafka 바이너리가 있는 경로에다가 옮겨야한다.(주의!!!)
 처음에는 jdbc를 confluent kafka connector의 lib에 넣어서 삽질을 좀 했는데 아니고 꼭 apache kafka 바이너리가 있는 경로의 libs에 넣어야한다
 나의 경우 kafka-connect 컨테이너의 `/kafka_2.13-3.0.0/libs` 하위에 JDBC jar를 추가했다

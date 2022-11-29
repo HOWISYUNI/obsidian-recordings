@@ -84,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "scp",
+                "query": "tcpdump",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,7 +101,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -182,10 +183,10 @@
   },
   "active": "407afd4b979e8318",
   "lastOpenFiles": [
-    "계정들.md",
     "infra/linux 일반.md",
-    "DB/PostgreSQL.md",
     "DataLake/Apache Kafka/test.md",
+    "계정들.md",
+    "DB/PostgreSQL.md",
     "infra/Docker/Docker.md",
     "().md",
     "DB/__SQL.md",
