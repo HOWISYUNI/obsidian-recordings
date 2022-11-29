@@ -239,7 +239,8 @@ postman에서 확인해도 된다.
 		 "db.timezone" : "Asia/Seoul",
 		 "mode":"timestamp",
 		 "timestamp.column.name" : "otime", 
-		 "table.whitelist" : "tag01_csc_bdp_db1_dbd338, tag02_csc_bdp_db1_dbd342, tag03_csc_bdp_db1_dbd346", 
+		 "schema.pattern" : "public",
+		 "table.whitelist" : "tag01_csc_bdp_db1_dbd338,tag02_csc_bdp_db1_dbd342,tag03_csc_bdp_db1_dbd346", 
 		 "topic.prefix" : "lcsasmdl_test_topic_"
 	} 
 }
