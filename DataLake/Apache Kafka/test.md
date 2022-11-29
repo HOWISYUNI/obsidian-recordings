@@ -229,8 +229,10 @@ postman에서 확인해도 된다.
 }
 ```
 
+`table.blacklist` 나 `table.whitelist` 에 여러 테이블을 나열할땐 컴마로 구분하지만, **띄어쓰기가 들어가면 안된다!!!!!!!!!!!!!!!!!!!!!!!!!!1**
+ex. (O) "table.blacklist" : "errors,test_table"                 (X) "table.whitelist" : "errors,test_table" 
 ```json
-{ "name": "my-source-connect", 
+{ "name": "postgresql-lcsasmdl-ansung_relay-connect", 
 	 "config": { 
 		 "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
 		 "connection.url": "jdbc:postgresql://10.121.117.175:5432/ansung_relay", 
@@ -240,8 +242,8 @@ postman에서 확인해도 된다.
 		 "mode":"timestamp",
 		 "timestamp.column.name" : "otime", 
 		 "schema.pattern" : "public",
-		 "table.whitelist" : "tag01_csc_bdp_db1_dbd338,tag02_csc_bdp_db1_dbd342,tag03_csc_bdp_db1_dbd346", 
-		 "topic.prefix" : "lcsasmdl_test_topic_"
+		 "table.blacklist" : "errors",
+		 "topic.prefix" : "ansung_relay_topic_"
 	} 
 }
 ```
