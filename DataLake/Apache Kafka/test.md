@@ -127,7 +127,7 @@ bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic hello.ka
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello.kafka --from-beginning
 # key-value 로 데이터 소모
 # --group 으로 새로운 컨슈머 그룹 생성
-bin/kafka-console-consumer.sh --bootstrap-sever localhost:9092 --topic hello.kafka --property print.key=true --property key.separator="-" --group hello-group --from-beginning
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello.kafka --property print.key=true --property key.separator="-" --group hello-group --from-beginning
 
 # 컨슈머 그룹 리스트
 bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
