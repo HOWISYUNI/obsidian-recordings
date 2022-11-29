@@ -212,18 +212,18 @@ postman에서 확인해도 된다.
 7. [어느곳에서든] 적절한 source connector property로 `POST` 수행해 소스 커넥트 등록
 ![[Pasted image 20221117205009.png]]
 ```json
-{ "name": "my-source-connect", 
-	 "config": { 
-		 "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
-		 "connection.url": "jdbc:mysql://localhost:3306/test", 
-		 "connection.user":"root", 
-		 "connection.password":"비밀번호",
-		 "mode":"incrementing",
-		 "incrementing.column.name" : "id", 
-		 "table.whitelist" : "users", 
-		 "topic.prefix" : "example_topic_", 
-		 "tasks.max" : "1"
-	} 
+{ "name": "my-source-connect", 
+     "config": { 
+         "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+         "connection.url": "jdbc:postgresql://10.121.117.175:5432/postgres", 
+         "connection.user":"ansung", 
+         "connection.password":"ansung",
+         "mode":"incrementing",
+         "incrementing.column.name" : "datetime", 
+         "table.whitelist" : "tag01_csc_bdp_db1_dbd338, tag02_csc_bdp_db1_dbd342, tag03_csc_bdp_db1_dbd346", 
+         "topic.prefix" : "lcsasmdl_topic_", 
+         "tasks.max" : "1"
+    } 
 }
 ```
 
