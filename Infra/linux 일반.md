@@ -92,3 +92,5 @@ crontab -e
 # cron 잡 리스트 확인
 crontab -l
 ```
+# scp
+![[Pasted image 20221129104104.png]]

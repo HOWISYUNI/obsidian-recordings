@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "mode": "source",
                 "source": false
               }
@@ -84,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "scp",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -105,7 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 200
   },
   "right": {
     "id": "e36a518f57cfbb8b",
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "계정들.md"
+                "file": "DataLake/Apache Kafka/test.md"
               }
             }
           },
@@ -178,17 +178,17 @@
       }
     ],
     "direction": "horizontal",
-    "width": 317.5
+    "width": 200
   },
   "active": "407afd4b979e8318",
   "lastOpenFiles": [
-    "().md",
     "계정들.md",
-    "DataLake/Apache Kafka/test.md",
-    "DB/PostgreSQL.md",
     "infra/linux 일반.md",
-    "DB/__SQL.md",
+    "DB/PostgreSQL.md",
+    "DataLake/Apache Kafka/test.md",
     "infra/Docker/Docker.md",
+    "().md",
+    "DB/__SQL.md",
     "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
     "infra/Docker/Buildx 삽질기.md",
     "infra/git.md"
