@@ -227,6 +227,22 @@ postman에서 확인해도 된다.
 }
 ```
 
+```json
+{ "name": "my-source-connect", 
+	 "config": { 
+		 "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+		 "connection.url": "jdbc:postgresql://10.121.117.175:5432/ansung_relay", 
+		 "connection.user":"ansung", 
+		 "connection.password":"ansung",
+		 "mode":"incrementing",
+		 "incrementing.column.name" : "datetime", 
+		 "table.whitelist" : "tag01_csc_bdp_db1_dbd338, tag02_csc_bdp_db1_dbd342, tag03_csc_bdp_db1_dbd346", 
+		 "topic.prefix" : "lcsasmdl_topic_", 
+		 "tasks.max" : "1",
+		 "timestamp.initial" : "-1"
+	} 
+}
+```
 
 ### 커넥터 설정(Configuration Properties)
 [confluent 문서](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#jdbc-source-connector-configuration-properties)
