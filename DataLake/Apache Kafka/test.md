@@ -234,12 +234,11 @@ postman에서 확인해도 된다.
 		 "connection.url": "jdbc:postgresql://10.121.117.175:5432/ansung_relay", 
 		 "connection.user":"ansung", 
 		 "connection.password":"ansung",
-		 "mode":"incrementing",
-		 "incrementing.column.name" : "datetime", 
+		 "db.timezone" : "Asia/Seoul",
+		 "mode":"timestamp",
+		 "timestamp.column.name" : "otime", 
 		 "table.whitelist" : "tag01_csc_bdp_db1_dbd338, tag02_csc_bdp_db1_dbd342, tag03_csc_bdp_db1_dbd346", 
-		 "topic.prefix" : "lcsasmdl_topic_", 
-		 "tasks.max" : "1",
-		 "timestamp.initial" : "-1"
+		 "topic.prefix" : "lcsasmdl_test_topic_"
 	} 
 }
 ```
