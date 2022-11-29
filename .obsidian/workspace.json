@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "407afd4b979e8318",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DataLake/Apache Kafka/test.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "6a86d8ade6284974",
             "type": "leaf",
             "state": {
@@ -54,8 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "78b877d092bc99a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DataLake/Apache Kafka/test.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -101,8 +102,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -181,13 +181,13 @@
     "direction": "horizontal",
     "width": 200
   },
-  "active": "407afd4b979e8318",
+  "active": "78b877d092bc99a9",
   "lastOpenFiles": [
-    "infra/linux 일반.md",
+    "infra/Docker/Docker.md",
     "DataLake/Apache Kafka/test.md",
+    "infra/linux 일반.md",
     "계정들.md",
     "DB/PostgreSQL.md",
-    "infra/Docker/Docker.md",
     "().md",
     "DB/__SQL.md",
     "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",

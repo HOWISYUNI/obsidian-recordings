@@ -169,7 +169,11 @@ retention 변경
 
 
 # Kafka Connect
-[confluent  Kafka Connect 공식문서](https://docs.confluent.io/kafka-connectors/self-managed/userguide.html#connect_configuring_workers)
+[Apache Kafka Connect 공식문서](https://kafka.apache.org/documentation/#connect)
+- Confluent Kafka Connect 와는 조금 다르니 위 문서 기반으로 이해할것
+- 기본적인 Connector들은 Apache Kafka에 내장
+- 추가적인 Connector는 jar 구현체를 plugin 형식으로 Connect에 등록해줘야 하며, 각각 설정이 상이하므로 개별 Connector 의 설정을 따라야한다.
+
 ## 분산모드 kafka connect
 ```bash
 # 2대 이상의 connect 서버 
@@ -179,20 +183,32 @@ retention 변경
 # 1. config/connect-distributed.properties 수정
 bootstrap.servers=10.121.117.175:9092
 
-# 2. connector jar 추가
-
+# 2. connector jar 추가 [[#JDBC Connector]] 를 수행
 
 # 3. distributed kafka connect worker 실행
 bin/connect-distributed.sh config/connect-distributed.properties
 ```
 
-## JDBC Connector
-JDBC를 이용해 RDB 데이터를 kafka로 이동시킬 때 필요한 커넥터
-1 ~ 3 과정은 [이 블로그](https://cjw-awdsd.tistory.com/53) 에서 도움 많이 받았고
-이후 나머지 과정은 [이 블로그](https://sup2is.github.io/2020/06/08/kafka-connect-example.html) 에서 도움 받았다
-개괄적인 이해에 관한 내용은 [Confluent 블로그](https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/#no-suitable-driver-found) 에 설명이 잘 돼있다
+## Connector
+개념
+- connector
+	- kafka-connect 서버에서 source나 sink로의 연결부 jar 구현체
+	- jar로 개발된 오픈소스 connector도 있고[(confluent hub)](https://docs.confluent.io/kafka-connectors/self-managed/kafka_connectors.html), 스스로 개발할수도 있다
+	- 오픈소스 connector를 사용할땐 플러그인 개념으로 동작하며 `config/connect-distributed.properties` 의 `plugins.path` 에 오픈소스 connector의 jar가 있는 디렉터리 위치를 추가해줘야한다.
+	- 설정이 동일하면 하나의 connector 생성
+		- ex. LCSASMDL 서버의 postgresql 의 public 스키마 테이블들을 하나의 connector로 생성
+	- task
+		- connector 하위 개념
+		- connector -> kafka-topic 로의 데이터 전달을 해주는 실제 프로세스인듯....
+		- 하나의 태스크가 여러 토픽으로 데이터를 전달할 수 도 있고, 여러 태스크가 하나의 토픽으로 데이터를 전달할 수도 있음
+		- 즉, connector-task : kafka-topic = 1 : N 일수도 있고, connector-task : kafka-topic = N : 1 일수도 있음
 
-1. confluent JDBC Connector [다운로드](https://www.confluent.io/hub/confluentinc/kafka-connect-jdbc) [소스코드](https://github.com/confluentinc/kafka-connect-jdbc)[Confluent 공식문서](https://docs.confluent.io/kafka-connectors/jdbc/current/index.html#jdbc-connector-source-and-sink-for-cp) 
+
+### JDBC Connector
+JDBC를 이용해 RDB 데이터를 kafka로 이동시킬 때 필요한 커넥터
+
+#### 세팅과정
+1. confluent JDBC Connector [다운로드](https://www.confluent.io/hub/confluentinc/kafka-connect-jdbc) [소스코드](https://github.com/confluentinc/kafka-connect-jdbc)
 2. ZIP으로 받았을 경우 원하는 경로로 unzip
 3. [jdbc connector를 kafka connect의 plugin으로 등록]`{kafka 경로}/config/connect-distributed.properties` 의 `plugin.path` 를 `{confluent kafka connector}/lib` 으로 세팅
 ![[Pasted image 20221117205158.png]]
@@ -248,22 +264,23 @@ ex. (O) "table.blacklist" : "errors,test_table"                 (X) "table.white
 }
 ```
 
-### 커넥터 설정(Configuration Properties)
+#### 커넥터 설정(Configuration Properties)
 [confluent 문서](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#jdbc-source-connector-configuration-properties)
-### jdbc.url
+- jdbc.url
 ![[Pasted image 20221129153354.png]]
 
-
-## PostgreSQL(중계 DB) 세팅
-[[PostgreSQL#세팅]]
-
-## Crontab 세팅
-[[linux 일반#crontab]]
+#### 참고문서
+- 1 ~ 3 과정 :  [이 블로그](https://cjw-awdsd.tistory.com/53) 에서 도움 많이 받았고
+- 4 이후 나머지 과정 [이 블로그](https://sup2is.github.io/2020/06/08/kafka-connect-example.html) 에서 도움 받았다
+- jdbc 커넥터 세팅 과정 공식 문서 : [Confluent JDBC Connector 공식문서](https://docs.confluent.io/kafka-connectors/jdbc/current/index.html#jdbc-connector-source-and-sink-for-cp) 
+- jdbc 커넥터 source connector property 공식 문서 : [Confluent source config](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#mode)
+- 자세한 내용 블로그 설명 : [Confluent 블로그 : Kafka Connect Deep Dive - JDBC Source Connector](https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/#no-suitable-driver-found)
 
 
 # Kafka Streams
 https://kafka.apache.org/documentation/streams/developer-guide/
 https://github.com/bbejeck/kafka-streams-in-action
+
 
 # Trouble Shooting
 - Error connecting to node
@@ -328,3 +345,12 @@ config/server.properties에 선언된 ip가 클라이언트에서는 연결할 �
 ![[Pasted image 20221102173654.png]]
 2. 클라이언트 프로그램에서 메시지도 잘 들어갔다 (성공이나 실패시 로그는 같지만, 성공하면 프로세스가 호다닥 끝난다)
 ![[Pasted image 20221102173745.png]]
+
+
+# etc
+## PostgreSQL(중계 DB) 세팅
+[[PostgreSQL#세팅]]
+
+## Crontab 세팅
+[[linux 일반#crontab]]
+
