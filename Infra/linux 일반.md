@@ -60,3 +60,35 @@ S : 프로세스 상태
 ## 그룹 정보 관리
 /etc/group
 ![[Pasted image 20221003195458.png]]
+
+
+
+# crontab
+```bash
+# db 컨테이너 안에서
+
+# 설치
+sudo apt update -y
+sudo apt install -y cron
+
+# cron 시작
+sudo service cron start
+# cron 서비스 상태 확인
+sudo service cron status
+
+# 위 과정으로 안되면
+# cron systemctl 활성화 
+sudo systemctl enable cron.service 
+# cron systemctl 등록 확인 
+sudo systemctl list-unit-files | grep cron
+
+
+
+# crontab 잡 추가
+crontab -e
+# job 추가 : 파일에 sql 정의하고 cron 잡 정의
+# 매시 0분에 동작
+0 * * * * psql -U postgres --host localhost --port 5432 --dbname ansung_relay < /home/delete_data.sql
+# cron 잡 리스트 확인
+crontab -l
+```

@@ -211,46 +211,37 @@ curl 명령어로 요청하면 아래 사진같을거고
 postman에서 확인해도 된다.
 7. [어느곳에서든] 적절한 source connector property로 `POST` 수행해 소스 커넥트 등록
 ![[Pasted image 20221117205009.png]]
+```json
+{ "name": "my-source-connect", 
+	 "config": { 
+		 "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+		 "connection.url": "jdbc:mysql://localhost:3306/test", 
+		 "connection.user":"root", 
+		 "connection.password":"비밀번호",
+		 "mode":"incrementing",
+		 "incrementing.column.name" : "id", 
+		 "table.whitelist" : "users", 
+		 "topic.prefix" : "example_topic_", 
+		 "tasks.max" : "1"
+	} 
+}
+```
+
 
 ### 커넥터 설정(Configuration Properties)
 [confluent 문서](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#jdbc-source-connector-configuration-properties)
 
 
-## Connector De
+## PostgreSQL(중계 DB) 세팅
+[[PostgreSQL#세팅]]
+
+## Crontab 세팅
+[[linux 일반#crontab]]
 
 
-
-# Postgresql
-중계용 DB
-```bash
-# 데이터 마운트 용 볼륨 설정
-docker volume create pgdata
-
-# 컨테이너 백그라운드 동작
-docker run -p 5432:5432 --name postgresql -e POSTGRES_PASSWORD=postgresql -e TZ=Asia/Seoul -v pgdata:/var/lib/postgresql/data -d postgres:14.6
-
-# (안해줘도됨)PostgreSQL URL 설정. 외부 DB에 연결하기 위해 URL 설정
-export DB_URL = 'postgresql://postgres:postgresql@IP:5432/postgres'
-
-
-
-
-# 컨테이너 내부 진입 후 DB 쉘 동작
-# super user : postgre / postgresql
-psql -U postgres
-
-# DB 리스트 확인
-postgres=# \l
-
-# super user로 DB 생성
-CREATE DATABASE ansung_relay
-
-# dbeaver에서 USER 생성. default는 NOSUPERUSER, NOCREATEDB, NOCREATEUSER
-# ansung 계정으로 ansung_relay에 테이블 생성 시 그 테이블에만 권한 들어감
-create user ansung password 'ansung'
-
-
-```
+# Kafka Streams
+https://kafka.apache.org/documentation/streams/developer-guide/
+https://github.com/bbejeck/kafka-streams-in-action
 
 # Trouble Shooting
 - Error connecting to node
