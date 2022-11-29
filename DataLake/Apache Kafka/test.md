@@ -247,6 +247,8 @@ postman에서 확인해도 된다.
 
 ### 커넥터 설정(Configuration Properties)
 [confluent 문서](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#jdbc-source-connector-configuration-properties)
+### jdbc.url
+![[Pasted image 20221129153354.png]]
 
 
 ## PostgreSQL(중계 DB) 세팅
