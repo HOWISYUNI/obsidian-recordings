@@ -407,7 +407,12 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 		 "timestamp.column.name" : "otime", 
 		 "schema.pattern" : "public",
 		 "table.blacklist" : "errors",
-		 "topic.prefix" : "ansung_relay_topic_"
+		 "topic.prefix" : "ansung_relay_topic_",
+		 "transforms" : "InsertKey,IncludeFields",
+		 "transforms.Insertkey.type" : "org.apache.kafka.connect.transforms.ValueToKey",
+		 "transforms.InsertKey.fields" : "datetime",
+		 "transforms.IncludeFields.type" : "org.apache.kafka.connect.transforms.ReplaceField",
+		 "transforsm.IncludeFields.include" : ["name", "rawvalue"]
 	} 
 }
 ```
