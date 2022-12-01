@@ -395,6 +395,13 @@ postman에서 확인해도 된다.
 ex. (O) "table.blacklist" : "errors,test_table"                 (X) "table.whitelist" : "errors,test_table" 
 - `key.converter`, `value.converter` 
 API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기존 `connect-distributed.proterties` 세팅은 override 된다 ([Apache Kafka Doc#Configuring Connectors](https://kafka.apache.org/documentation/#connect_configuring)])
+- `transforms`
+	- jdbc connector를 통해 들어오는 메시지를 일차적으로 변형시키는 함수
+	- 실제로 미리 apache kafka connect로 풀린 클래스를 사용
+	- 리스트 선언 순서대로 변환먹으니까 스크립트처럼 생각할것
+	1. `transforms` : 변형 항목 리스트 선언
+	2. `transforms.변형항목.type` : apache kafka connect 클래스
+	3. `transforms.변형항목.___` : type에서 지원하는 항목에 맞춰 작성(공식문서 [Apache Kafka Doc#Configuring Connectors](https://kafka.apache.org/documentation/#connect_configuring)참조)
 ```json
 { "name": "postgresql-lcsasmdl-ansung_relay-connect", 
 	 "config": { 
@@ -409,10 +416,10 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 		 "table.blacklist" : "errors",
 		 "topic.prefix" : "ansung_relay_topic_",
 		 "transforms" : "InsertKey,IncludeFields",
-		 "transforms.Insertkey.type" : "org.apache.kafka.connect.transforms.ValueToKey",
+		 "transforms.InsertKey.type" : "org.apache.kafka.connect.transforms.ValueToKey",
 		 "transforms.InsertKey.fields" : "datetime",
-		 "transforms.IncludeFields.type" : "org.apache.kafka.connect.transforms.ReplaceField",
-		 "transforsm.IncludeFields.include" : ["name", "rawvalue"]
+		 "transforms.IncludeFields.type" : "org.apache.kafka.connect.transforms.ReplaceField$Value",
+		 "transforms.IncludeFields.include" : "name,rawvalue"
 	} 
 }
 ```
