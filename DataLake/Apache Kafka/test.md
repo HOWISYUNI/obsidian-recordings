@@ -390,8 +390,11 @@ postman에서 확인해도 된다.
 }
 ```
 
+- `table.blacklist`  `table.whitelist`
 `table.blacklist` 나 `table.whitelist` 에 여러 테이블을 나열할땐 컴마로 구분하지만, **띄어쓰기가 들어가면 안된다!!!!!!!!!!!!!!!!!!!!!!!!!!1**
 ex. (O) "table.blacklist" : "errors,test_table"                 (X) "table.whitelist" : "errors,test_table" 
+- `key.converter`, `value.converter` 
+API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기존 `connect-distributed.proterties` 세팅은 override 된다 ([Apache Kafka Doc#Configuring Connectors](https://kafka.apache.org/documentation/#connect_configuring)])
 ```json
 { "name": "postgresql-lcsasmdl-ansung_relay-connect", 
 	 "config": { 
