@@ -419,7 +419,7 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 		 "transforms.InsertKey.type" : "org.apache.kafka.connect.transforms.ValueToKey",
 		 "transforms.InsertKey.fields" : "datetime",
 		 "transforms.IncludeFields.type" : "org.apache.kafka.connect.transforms.ReplaceField$Value",
-		 "transforms.IncludeFields.include" : "name,rawvalue"
+		 "transforms.IncludeFields.include" : "name,rawvalue,datetime"
 	} 
 }
 ```
