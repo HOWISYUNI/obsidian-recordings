@@ -182,12 +182,157 @@ retention 변경
 
 # 1. config/connect-distributed.properties 수정
 bootstrap.servers=10.121.117.175:9092
+key.converter.schemas.enable=true
+value.converter.schemas.enable=true
+plugin.path=/app/plugins/confluentinc-kafka-connect-jdbc-10.6.0-custom/lib
 
 # 2. connector jar 추가 [[#JDBC Connector]] 를 수행
 
 # 3. distributed kafka connect worker 실행
 bin/connect-distributed.sh config/connect-distributed.properties
 ```
+
+## config/connect-distributed.properties 세팅
+초기 세팅 상태는 아래와 같다
+```properties
+##
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+##
+
+# This file contains some of the configurations for the Kafka Connect distributed worker. This file is intended
+# to be used with the examples, and some settings may differ from those used in a production system, especially
+# the `bootstrap.servers` and those specifying replication factors.
+
+# A list of host/port pairs to use for establishing the initial connection to the Kafka cluster.
+bootstrap.servers=10.121.117.175:9092
+
+# unique name for the cluster, used in forming the Connect cluster group. Note that this must not conflict with consumer group IDs
+group.id=connect-cluster
+
+# The converters specify the format of data in Kafka and how to translate it into Connect data. Every Connect user will
+# need to configure these based on the format they want their data in when loaded from or stored into Kafka
+key.converter=org.apache.kafka.connect.json.JsonConverter
+value.converter=org.apache.kafka.connect.json.JsonConverter
+# Converter-specific settings can be passed in by prefixing the Converter's setting with the converter we want to apply
+# it to
+key.converter.schemas.enable=false
+value.converter.schemas.enable=false
+
+# Topic to use for storing offsets. This topic should have many partitions and be replicated and compacted.
+# Kafka Connect will attempt to create the topic automatically when needed, but you can always manually create
+# the topic before starting Kafka Connect if a specific topic configuration is needed.
+# Most users will want to use the built-in default replication factor of 3 or in some cases even specify a larger value.
+# Since this means there must be at least as many brokers as the maximum replication factor used, we'd like to be able
+# to run this example on a single-broker cluster and so here we instead set the replication factor to 1.
+offset.storage.topic=connect-offsets
+offset.storage.replication.factor=1
+#offset.storage.partitions=25
+
+# Topic to use for storing connector and task configurations; note that this should be a single partition, highly replicated,
+# and compacted topic. Kafka Connect will attempt to create the topic automatically when needed, but you can always manually create
+# the topic before starting Kafka Connect if a specific topic configuration is needed.
+# Most users will want to use the built-in default replication factor of 3 or in some cases even specify a larger value.
+# Since this means there must be at least as many brokers as the maximum replication factor used, we'd like to be able
+# to run this example on a single-broker cluster and so here we instead set the replication factor to 1.
+config.storage.topic=connect-configs
+config.storage.replication.factor=1
+
+# Topic to use for storing statuses. This topic can have multiple partitions and should be replicated and compacted.
+# Kafka Connect will attempt to create the topic automatically when needed, but you can always manually create
+# the topic before starting Kafka Connect if a specific topic configuration is needed.
+# Most users will want to use the built-in default replication factor of 3 or in some cases even specify a larger value.
+# Since this means there must be at least as many brokers as the maximum replication factor used, we'd like to be able
+# to run this example on a single-broker cluster and so here we instead set the replication factor to 1.
+status.storage.topic=connect-status
+status.storage.replication.factor=1
+#status.storage.partitions=5
+
+# Flush much faster than normal, which is useful for testing/debugging
+offset.flush.interval.ms=10000
+
+# List of comma-separated URIs the REST API will listen on. The supported protocols are HTTP and HTTPS.
+# Specify hostname as 0.0.0.0 to bind to all interfaces.
+# Leave hostname empty to bind to default interface.
+# Examples of legal listener lists: HTTP://myhost:8083,HTTPS://myhost:8084"
+#listeners=HTTP://:8083
+
+# The Hostname & Port that will be given out to other workers to connect to i.e. URLs that are routable from other servers.
+# If not set, it uses the value for "listeners" if configured.
+#rest.advertised.host.name=
+#rest.advertised.port=
+#rest.advertised.listener=
+
+# Set to a list of filesystem paths separated by commas (,) to enable class loading isolation for plugins
+# (connectors, converters, transformations). The list should consist of top level directories that include
+# any combination of:
+# a) directories immediately containing jars with plugins and their dependencies
+# b) uber-jars with plugins and their dependencies
+# c) directories immediately containing the package directory structure of classes of plugins and their dependencies
+# Examples:
+# plugin.path=/usr/local/share/java,/usr/local/share/kafka/plugins,/opt/connectors,
+```
+
+
+### bootstrap.servers
+
+### key.conveter, value.converter
+kafak connect가 메시지(key: value) 를 가져올 때
+1. 원본 데이터
+2. 원본 데이터를 kafka connect 메시지로 직렬화
+3. kafka connect 메시지를 kafka topic 메시지로 전달
+위 과정을 거친다.
+- converter
+2번 과정에서 kafka로 들어올때 메시지가 직렬화되는 방식들을 지정해줘야 하며,
+기본 세팅의 경우 `org.apache.kafka.connect.json.JsonConverter`를 사용한다.
+apache kafka의 경우 `JsonConverter`, `StringConverter`, `ByteArrayConveter` 를 기본제공
+- converter.schemas.enable
+`true` 로 세팅 시 메시지 직렬화 시 값에 스키마 정보도 가져오는데 보기 좀 까다롭다
+`false` 로 세팅 시 row 데이터만 토픽 메시지로 들어와서 보기 편하다
+![[Pasted image 20221201120826.png]]
+```json
+# false로 세팅 시 payload 에 내가 원하는 값들이 들어있다.
+{
+    "schema":{
+        "type":"struct",
+        "fields":[{"type":"int64","optional":false,"name":"org.apache.kafka.connect.data.Timestamp","version":1,"field":"otime"},{"type":"string","optional":false,"field":"name"},{"type":"int64","optional":false,"name":"org.apache.kafka.connect.data.Timestamp","version":1,"field":"last_modified"},{"type":"string","optional":false,"field":"value"},{"type":"string","optional":true,"field":"rawvalue"},{"type":"string","optional":false,"field":"datetime"}],
+        "optional":false,
+        "name":"tag02_csc_bdp_db1_dbd342"
+    }
+    ,"payload":{
+        "otime":1669862421124
+        ,"name":"F5.P.CSC.1.BDP.01.00.P_BDP1.DB1_DBD342"
+        ,"last_modified":1669804438725
+        ,"value":"186"
+        ,"rawvalue":"186"
+        ,"datetime":"2022-12-01 11:40:21"
+        }
+}
+
+# true 로 세팅 시 내가 원하는 값만 토픽 메시지로 들어온다
+{"otime":1669862877123
+,"name":"F5.P.CSC.1.BDP.01.00.P_BDP1.DB1_DBD342"
+,"last_modified":1669804438725
+,"value":"186"
+,"rawvalue":"186"
+,"datetime":"2022-12-01 11:47:57"
+}
+```
+
+### plugin
+apache kafka가 제공하지 않는 connector, convertor, transformation가 있을 경우 다운로드 받고 `plugin.path` 에 해당 플러그인의 경로를 명시해야함
 
 ## Connector
 개념
