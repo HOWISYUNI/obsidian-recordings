@@ -350,6 +350,7 @@ apache kafka가 제공하지 않는 connector, convertor, transformation가 있�
 
 
 ### JDBC Connector
+[Confluent JDBC Connector#Overview](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/index.html)
 JDBC를 이용해 RDB 데이터를 kafka로 이동시킬 때 필요한 커넥터
 
 #### 세팅과정
@@ -397,6 +398,7 @@ ex. (O) "table.blacklist" : "errors,test_table"                 (X) "table.white
 API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기존 `connect-distributed.proterties` 세팅은 override 된다 ([Apache Kafka Doc#Configuring Connectors](https://kafka.apache.org/documentation/#connect_configuring)])
 - `transforms`
 	- jdbc connector를 통해 들어오는 메시지를 일차적으로 변형시키는 함수
+	- Single Message Transformas(SMTs) 기반 [Confluent - How to User Single Message Transfors in Kafka Connect](https://www.confluent.io/blog/kafka-connect-single-message-transformation-tutorial-with-examples/)
 	- 실제로 미리 apache kafka connect로 풀린 클래스를 사용
 	- 리스트 선언 순서대로 변환먹으니까 스크립트처럼 생각할것
 	1. `transforms` : 변형 항목 리스트 선언
@@ -425,7 +427,7 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 ```
 
 #### 커넥터 설정(Configuration Properties)
-[confluent 문서](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#jdbc-source-connector-configuration-properties)
+[Confluent JDBC Connector#Properties](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#jdbc-source-connector-configuration-properties)
 - jdbc.url
 ![[Pasted image 20221129153354.png]]
 
@@ -433,14 +435,25 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 - 1 ~ 3 과정 :  [이 블로그](https://cjw-awdsd.tistory.com/53) 에서 도움 많이 받았고
 - 4 이후 나머지 과정 [이 블로그](https://sup2is.github.io/2020/06/08/kafka-connect-example.html) 에서 도움 받았다
 - jdbc 커넥터 세팅 과정 공식 문서 : [Confluent JDBC Connector 공식문서](https://docs.confluent.io/kafka-connectors/jdbc/current/index.html#jdbc-connector-source-and-sink-for-cp) 
-- jdbc 커넥터 source connector property 공식 문서 : [Confluent source config](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#mode)
 - 자세한 내용 블로그 설명 : [Confluent 블로그 : Kafka Connect Deep Dive - JDBC Source Connector](https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/#no-suitable-driver-found)
 
 
 # Kafka Streams
 https://kafka.apache.org/documentation/streams/developer-guide/
 https://github.com/bbejeck/kafka-streams-in-action
+https://github.com/confluentinc/examples
 
+# Kafka Connect + Kafka Streams
+[Confluent - Pipelining with Kafka Connect and Kafka Streams](https://docs.confluent.io/platform/current/tutorials/examples/connect-streams-pipeline/docs/index.html#pipelining-with-kconnect-long-and-kstreams)
+## Apache Kafka 지원
+1. CLI Producer with String
+2. JDBC source connector with JSON
+
+## Apache Kafka 미지원
+avro를 Apache Kafka가 지원안하는것같아 관련된 것 미지원
+1. JDBC source connector with SpecificAvro
+2. JDBC source connector with GenericAvro
+3. ...
 
 # Trouble Shooting
 - Error connecting to node
