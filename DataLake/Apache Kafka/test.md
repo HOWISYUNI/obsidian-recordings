@@ -442,6 +442,8 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 https://kafka.apache.org/documentation/streams/developer-guide/
 https://github.com/bbejeck/kafka-streams-in-action
 https://github.com/confluentinc/examples
+https://www.confluent.io/blog/building-real-time-streaming-etl-pipeline-20-minutes/
+https://www.confluent.io/resources/kafka-streams-serialization-deserialization-code-examples/
 
 # Kafka Connect + Kafka Streams
 [Confluent - Pipelining with Kafka Connect and Kafka Streams](https://docs.confluent.io/platform/current/tutorials/examples/connect-streams-pipeline/docs/index.html#pipelining-with-kconnect-long-and-kstreams)
