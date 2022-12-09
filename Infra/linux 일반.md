@@ -94,3 +94,6 @@ crontab -l
 ```
 # scp
 ![[Pasted image 20221129104104.png]]
+```bash
+scp ngdbc.jar lcsasmdl@10.121.117.175:/home/lcsasmdl/다운로드
+```

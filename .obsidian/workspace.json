@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/PostgreSQL.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/Apache Airflow/Airflow Python API.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/Apache Airflow/Airflow Python API.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/Apache Airflow/Airflow Python API.md"
+                "file": "DataLake/Apache Kafka/test.md"
               }
             }
           },
@@ -181,17 +181,17 @@
     "direction": "horizontal",
     "width": 340.5
   },
-  "active": "78b877d092bc99a9",
+  "active": "e5670b0d8b2f7d0e",
   "lastOpenFiles": [
-    "계정들.md",
-    "DataLake/Apache Kafka/test.md",
-    "infra/Docker/Docker.md",
     "infra/linux 일반.md",
+    "DataLake/Apache Kafka/test.md",
     "DB/PostgreSQL.md",
+    "DataLake/Apache Airflow/Airflow Python API.md",
+    "계정들.md",
+    "infra/Docker/Docker.md",
     "().md",
     "DB/__SQL.md",
     "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md",
-    "infra/Docker/Buildx 삽질기.md",
-    "infra/git.md"
+    "infra/Docker/Buildx 삽질기.md"
   ]
 }
