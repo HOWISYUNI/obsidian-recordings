@@ -435,14 +435,13 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 		 "connection.user":"SAPABAP1", 
 		 "connection.password":"Chilsung123",
 		 "db.timezone":"Asia/Seoul",
-		 "mode":"timestamp",
-		 "query":"SELECT * FROM (SELECT ERSDA AS CREATIONDATE, LTRIM(MAKT.MATNR, '0') AS MATNUM, MAKT.MAKTX AS MATNAME, MARA.MATKL AS MATCLSNUM, T.WGBEZ AS MATCLSNAME FROM (SELECT MATNR, MATKL, ERSDA FROM MARA) AS MARA LEFT JOIN (SELECT MATNR, MAKTX FROM MAKT WHERE SPRAS = '3') AS MAKT ON MARA.MATNR = MAKT.MATNR LEFT JOIN (SELECT MATKL, WGBEZ FROM T023T WHERE SPRAS ='3' AND MANDT = '200') AS T ON MARA.MATKL = T.MATKL)",
-		 "timestamp.column.name":"CREATIONDATE", 
+		 "mode":"bulk",
+		 "query":"SELECT * FROM (SELECT ERSDA AS CREATIONDATE, LTRIM(MAKT.MATNR, '0') AS MATNUM, MAKT.MAKTX AS MATNAME, MARA.MATKL AS MATCLSNUM, T.WGBEZ AS MATCLSNAME FROM (SELECT MATNR, MATKL, ERSDA FROM MARA) AS MARA LEFT JOIN (SELECT MATNR, MAKTX FROM MAKT WHERE SPRAS = '3') AS MAKT ON MARA.MATNR = MAKT.MATNR LEFT JOIN (SELECT MATKL, WGBEZ FROM T023T WHERE SPRAS ='3' AND MANDT = '200') AS T ON MARA.MATKL = T.MATKL)",
 		 "transforms":"InsertKey",
 		 "transforms.InsertKey.type":"org.apache.kafka.connect.transforms.ValueToKey",
 		 "transforms.InsertKey.fields":"MATNUM",
 		 "poll.interval.ms":10000,
-		 "topic.prefix":"sap_material_master_topic_"
+		 "topic.prefix":"sap_material_master_topic"
 	} 
 }
 ```
