@@ -428,25 +428,24 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 ```
 
 ```json
-{ "name": "postgresql-lcsasmdl-ansung_relay-connect", 
+{ "name": "saphana-lcssapdb-material_master-connect", 
 	 "config": { 
-		 "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
-		 "connection.url": "jdbc:postgresql://10.121.117.175:5432/ansung_relay", 
-		 "connection.user":"ansung", 
-		 "connection.password":"ansung",
-		 "db.timezone" : "Asia/Seoul",
+		 "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
+		 "connection.url":"jdbc:sap://10.120.2.230:30015/?autocommit=false", 
+		 "connection.user":"SAPABAP1", 
+		 "connection.password":"Chilsung123",
+		 "db.timezone":"Asia/Seoul",
 		 "mode":"timestamp",
-		 "timestamp.column.name" : "otime", 
-		 "schema.pattern" : "public",
-		 "table.blacklist" : "errors",
-		 "topic.prefix" : "ansung_relay_topic_",
-		 "transforms" : "InsertKey,IncludeFields",
-		 "transforms.InsertKey.type" : "org.apache.kafka.connect.transforms.ValueToKey",
-		 "transforms.InsertKey.fields" : "datetime",
-		 "transforms.IncludeFields.type" : "org.apache.kafka.connect.transforms.ReplaceField$Value",
-		 "transforms.IncludeFields.include" : "name,rawvalue,datetime"
+		 "query":"SELECT * FROM (SELECT ERSDA AS CREATIONDATE, LTRIM(MAKT.MATNR, '0') AS MATNUM, MAKT.MAKTX AS MATNAME, MARA.MATKL AS MATCLSNUM, T.WGBEZ AS MATCLSNAME FROM (SELECT MATNR, MATKL, ERSDA FROM MARA) AS MARA LEFT JOIN (SELECT MATNR, MAKTX FROM MAKT WHERE SPRAS = '3') AS MAKT ON MARA.MATNR = MAKT.MATNR LEFT JOIN (SELECT MATKL, WGBEZ FROM T023T WHERE SPRAS ='3' AND MANDT = '200') AS T ON MARA.MATKL = T.MATKL) o;",
+		 "timestamp.column.name":"CREATIONDATE", 
+		 "transforms":"InsertKey",
+		 "transforms.InsertKey.type":"org.apache.kafka.connect.transforms.ValueToKey",
+		 "transforms.InsertKey.fields":"MATNUM",
+		 "poll.interval.ms":10000,
+		 "topic.prefix":"sap_material_master_topic_"
 	} 
-}```
+}
+```
 
 #### 커넥터 설정(Configuration Properties)
 [Confluent JDBC Connector#Properties](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#jdbc-source-connector-configuration-properties)
