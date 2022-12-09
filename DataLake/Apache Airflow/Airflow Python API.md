@@ -1,7 +1,9 @@
-# PythonOperator
-## 템플릿 변수와 Python Callable의 kwargs 호출
+# airflow.operators.python
+[apache airflow | airflow.oeprators.python Class Docs](https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/operators/python/index.html)
+## PythonOperator
+### 템플릿 변수와 Python Callable의 kwargs 호출
 
-### 1. Operator안에서 (진자 aka. jinja) 템플릿 변수 사용하기
+#### 1. Operator안에 (진자 aka. jinja) 템플릿 변수 사용하기
 진자 템플릿화된 컨텍스트 변수를 사용할 수 있다 (airflow engine이 변환 수행해준대)
 - 기본적으로 {{}} 로 감싸서(jinja 템플릿) 사용하면되고
 ```python
@@ -36,9 +38,38 @@ calculate_stats=PythonOperator(
 ![[Pasted image 20220901175410.png]]
 
 
-### 2. Python Callable 원하는 변수 주입
+#### 2. Python 기반 Operator의 context 변수 
+##### (권장) airflow.operators.python 클래스 get_current_context() 함수 사용
+환경 : apache airflow 2.4.2
+```python
 
-#### op_kwargs로 주입할 경우 = DAG 기본파라미터와 같은 레벨 딕셔너리로 사용 가능
+'''
+- type(kwargs['execution_date']) = <class 'Proxy'> 
+(Proxy 클래스에도 format 함수 있어 kwargs['execution_date'].format('YYYYMMDD')는 동작)
+
+- type(context['execution_date']) = <class 'pendulum.datetime.DateTime'>
+
+type(kwargs['execution_date']) = <class 'Proxy'> 라서 pendulum.datetime 객체만 허용하는 pendulum.Timezone.convert()[pendulum github](https://github.com/sdispater/pendulum/blob/master/pendulum/tz/timezone.py) 에러 발생
+
+type error 방지를 위해 context 변수를 airflow.operators.python.get_current_context() 활용
+'''
+
+import pendulum
+from airflow.operators.python import get_current_context
+
+kst = pendulum.timezone("Asia/Seoul")
+
+# 기존 : kwargs는 python callable 함수의 parameter 이름 def callable(**kwargs)
+kst.convert(kwargs['execution_date']).format('YYYYMMDD')
+
+# 현재 : 현재 동작중인 태스크의 context 변수 받아오는 get_current_context 함수 활용
+context = get_current_context()
+yesterday = kst.convert(context['execution_date']).format('YYYYMMDD')
+```
+
+#### 3. Python Callable에 원하는 변수 주입
+
+##### op_kwargs로 주입할 경우 = DAG 기본파라미터와 같은 레벨 딕셔너리로 사용 가능
 아래같이 op_kwargs로 원하는 변수를 묶어서 전달하면
 ```python
 # SUBDAG_tsis.py
@@ -81,7 +112,7 @@ def partition_hive(**kwargs) -> None:
 ```
 
 
-#### 다른 이름으로 주입할 경우 = DAG 하위 파라미터로 사용 가능
+##### 다른 이름으로 주입할 경우 = DAG 하위 파라미터로 사용 가능
 DAG에서 PythonOperator 태스크가 아래같이 설정돼있다면
 ```python
 # 제품 재고이동
@@ -127,7 +158,7 @@ Task Attributes를 확인하면
 ![[Pasted image 20220901180249.png]]
 이런 식으로 Task Attribute 하위에 내가 선언한 변수가 딕셔너리로 물려있음을 알 수 있다.
 
-### 3. 왜그럴까 (소스코드 까보기)
+#### 3. 왜그럴까 (소스코드 까보기)
 Python Operator 정의는 아래같다 ([출처](https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/operators/python/index.html?highlight=template_fields#airflow.operators.python.PythonOperator.template_fields))
 ![[Pasted image 20220901180509.png]]
 Python Operator 소스를 보면 아래처럼 흘러서, 합해진 딕셔너리 변수가 pytho  callable 함수로 전달된다
