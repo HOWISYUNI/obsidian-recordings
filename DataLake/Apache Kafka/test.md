@@ -375,6 +375,7 @@ curl 명령어로 요청하면 아래 사진같을거고
 postman에서 확인해도 된다.
 7. [어느곳에서든] 적절한 source connector property로 `POST` 수행해 소스 커넥트 등록
 ![[Pasted image 20221117205009.png]]
+샘플
 ```json
 { "name": "my-source-connect", 
      "config": { 
@@ -425,6 +426,27 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 	} 
 }
 ```
+
+```json
+{ "name": "postgresql-lcsasmdl-ansung_relay-connect", 
+	 "config": { 
+		 "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+		 "connection.url": "jdbc:postgresql://10.121.117.175:5432/ansung_relay", 
+		 "connection.user":"ansung", 
+		 "connection.password":"ansung",
+		 "db.timezone" : "Asia/Seoul",
+		 "mode":"timestamp",
+		 "timestamp.column.name" : "otime", 
+		 "schema.pattern" : "public",
+		 "table.blacklist" : "errors",
+		 "topic.prefix" : "ansung_relay_topic_",
+		 "transforms" : "InsertKey,IncludeFields",
+		 "transforms.InsertKey.type" : "org.apache.kafka.connect.transforms.ValueToKey",
+		 "transforms.InsertKey.fields" : "datetime",
+		 "transforms.IncludeFields.type" : "org.apache.kafka.connect.transforms.ReplaceField$Value",
+		 "transforms.IncludeFields.include" : "name,rawvalue,datetime"
+	} 
+}```
 
 #### 커넥터 설정(Configuration Properties)
 [Confluent JDBC Connector#Properties](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/source_config_options.html#jdbc-source-connector-configuration-properties)
