@@ -416,7 +416,7 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 		 "mode":"timestamp",
 		 "timestamp.column.name" : "otime", %%NULL값가능 컬럼 입력하면 오류%%
 		 "schema.pattern" : "public",
-		 "table.blacklist" : "errors", %%bulk 모드에서는 whilte, blacklist 필요x%%
+		 "table.blacklist" : "errors", 
 		 "topic.prefix" : "ansung_relay_topic_",
 		 "transforms" : "InsertKey,IncludeFields",
 		 "transforms.InsertKey.type" : "org.apache.kafka.connect.transforms.ValueToKey",
@@ -443,6 +443,27 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 		 "poll.interval.ms":10000,
 		 "topic.prefix":"sap_material_master_topic"
 	} 
+}
+```
+
+```json
+{ "name" : "test-view",
+	"config":{
+		"connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
+		"connection.url":"jdbc:sqlserver://10.121.117.158:1433;databaseName=UAPI",
+		"connection.user":"UAPIViewer",
+		"connection.password":"lcsmes1!",
+		"db.timezone":"Asia/Seoul",
+		"schema.pattern" : "dbo,",
+		"table.types" : "view",
+		"mode" : "bulk", # bulk모드에서는whilte,blacklist필요x,
+		"query" : "SELECT * FROM VW_CSC_PO_BOM",
+		"transforms":"InsertKey",
+		"transforms.InsertKey.type":"org.apache.kafka.connect.transforms.ValueToKey",
+		"transforms.InsertKey.fields":"DATE",
+		"poll.interval.ms":3000,
+		"topic.prefix":"test-view"
+	}
 }
 ```
 
