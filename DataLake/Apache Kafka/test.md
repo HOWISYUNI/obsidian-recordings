@@ -416,7 +416,7 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 		 "mode":"timestamp",
 		 "timestamp.column.name" : "otime", %%NULL값가능 컬럼 입력하면 오류%%
 		 "schema.pattern" : "public",
-		 "table.blacklist" : "errors",
+		 "table.blacklist" : "errors", %%bulk 모드에서는 whilte, blacklist 필요x%%
 		 "topic.prefix" : "ansung_relay_topic_",
 		 "transforms" : "InsertKey,IncludeFields",
 		 "transforms.InsertKey.type" : "org.apache.kafka.connect.transforms.ValueToKey",
