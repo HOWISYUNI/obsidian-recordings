@@ -179,16 +179,15 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 358.5
   },
   "active": "e5670b0d8b2f7d0e",
   "lastOpenFiles": [
-    "infra/linux 일반.md",
-    "DataLake/Apache Kafka/test.md",
-    "DB/PostgreSQL.md",
-    "DataLake/Apache Airflow/Airflow Python API.md",
     "계정들.md",
+    "DataLake/Apache Kafka/test.md",
+    "infra/linux 일반.md",
+    "DataLake/Apache Airflow/Airflow Python API.md",
+    "DB/PostgreSQL.md",
     "infra/Docker/Docker.md",
     "().md",
     "DB/__SQL.md",

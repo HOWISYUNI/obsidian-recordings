@@ -414,7 +414,7 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 		 "connection.password":"ansung",
 		 "db.timezone" : "Asia/Seoul",
 		 "mode":"timestamp",
-		 "timestamp.column.name" : "otime", 
+		 "timestamp.column.name" : "otime", %%NULL값가능 컬럼 입력하면 오류%%
 		 "schema.pattern" : "public",
 		 "table.blacklist" : "errors",
 		 "topic.prefix" : "ansung_relay_topic_",
@@ -478,7 +478,7 @@ avro를 Apache Kafka가 지원안하는것같아 관련된 것 미지원
 3. ...
 
 # Trouble Shooting
-- Error connecting to node
+## Error connecting to node
 1. config/server.properties 의 advertised.listeners 수정
 로컬 머신의 ip로 배포해야 클라이언트에서 연결 가능하다
 ![[Pasted image 20221102171005.png]]
@@ -493,7 +493,7 @@ tcpdump port {port} # 이 포트로 들어오거나 나간느 패킷 모두 리�
 tcpdump dst port {port} # 이 포트로 들어오는 패킷 모두 리스닝
 ```
 
-- 메시지가 안들어감
+## 메시지가 안들어감
 상황
 로컬에서 `bin/kafka-broker-api-versions.sh --bootstrap-server 10.121.117.175:9092`도 오류나고
 ![[Pasted image 20221102171420.png]]
@@ -540,6 +540,7 @@ config/server.properties에 선언된 ip가 클라이언트에서는 연결할 �
 ![[Pasted image 20221102173654.png]]
 2. 클라이언트 프로그램에서 메시지도 잘 들어갔다 (성공이나 실패시 로그는 같지만, 성공하면 프로세스가 호다닥 끝난다)
 ![[Pasted image 20221102173745.png]]
+
 
 
 # etc
