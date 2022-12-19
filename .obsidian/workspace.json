@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "계정들.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "계정들.md",
+                "file": "DB/PostgreSQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,14 +49,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DataLake/Apache Airflow/Airflow Python API.md",
+                "file": "infra/linux 일반.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "계정들.md",
+                "file": "infra/linux 일반.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "계정들.md",
+                "file": "infra/linux 일반.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "계정들.md"
+                "file": "infra/linux 일반.md"
               }
             }
           },
@@ -181,17 +181,17 @@
     "direction": "horizontal",
     "width": 358.5
   },
-  "active": "a54462a048570516",
+  "active": "78b877d092bc99a9",
   "lastOpenFiles": [
-    "DataLake/Apache Kafka/test.md",
-    "Language/Pandas.md",
-    "infra/linux 일반.md",
     "계정들.md",
     "DB/PostgreSQL.md",
-    "infra/Docker/Docker.md",
-    "DataLake/Apache Airflow/Airflow Python API.md",
-    "().md",
-    "DB/__SQL.md",
-    "DataLake/Apache Kafka/로컬 싱글브로커 테스트.md"
+    "DataLake/Apache Kafka/test.md",
+    "MLOPS/BentoML.md",
+    "MLOPS/아키텍쳐.md",
+    "DataLake/hadoop ecosystem/HDFS/General.md",
+    "DataLake/hadoop ecosystem/HDFS/분석서버 초기세팅.md",
+    "DataLake/Apache Airflow/칠성 airflow.md",
+    "MLOPS/디자인패턴.md",
+    "Language/Pandas.md"
   ]
 }

@@ -64,6 +64,7 @@ S : 프로세스 상태
 
 
 # crontab
+## 설치
 ```bash
 # db 컨테이너 안에서
 
@@ -82,16 +83,20 @@ sudo systemctl enable cron.service
 # cron systemctl 등록 확인 
 sudo systemctl list-unit-files | grep cron
 
+```
 
-
+## 크론 잡 핸들링
+```bash
 # crontab 잡 추가
 crontab -e
 # job 추가 : 파일에 sql 정의하고 cron 잡 정의
 # 매시 0분에 동작
 0 * * * * psql -U postgres --host localhost --port 5432 --dbname ansung_relay < /home/delete_data.sql
+
 # cron 잡 리스트 확인
 crontab -l
 ```
+
 # scp
 ![[Pasted image 20221129104104.png]]
 ```bash
