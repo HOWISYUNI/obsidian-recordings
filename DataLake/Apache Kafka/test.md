@@ -472,12 +472,17 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 - jdbc.url
 ![[Pasted image 20221129153354.png]]
 
+
 #### 참고문서
 - 1 ~ 3 과정 :  [이 블로그](https://cjw-awdsd.tistory.com/53) 에서 도움 많이 받았고
 - 4 이후 나머지 과정 [이 블로그](https://sup2is.github.io/2020/06/08/kafka-connect-example.html) 에서 도움 받았다
 - jdbc 커넥터 세팅 과정 공식 문서 : [Confluent JDBC Connector 공식문서](https://docs.confluent.io/kafka-connectors/jdbc/current/index.html#jdbc-connector-source-and-sink-for-cp) 
 - 자세한 내용 블로그 설명 : [Confluent 블로그 : Kafka Connect Deep Dive - JDBC Source Connector](https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/#no-suitable-driver-found)
 
+## REST API
+| HTTP 메서드 | 호출경로                            | 설명                   |
+| ----------- | ----------------------------------- | ---------------------- |
+| POST        | /connectors/{connector이름}/restart | 실행중인 커넥터 재시작 | 
 
 # Kafka Streams
 https://kafka.apache.org/documentation/streams/developer-guide/
