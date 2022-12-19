@@ -408,21 +408,21 @@ API 호출 시 json body로 `key.converter`, `value.converter`  선언 시 기�
 ```json
 { "name": "postgresql-lcsasmdl-ansung_relay-connect", 
 	 "config": { 
-		 "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
-		 "connection.url": "jdbc:postgresql://10.121.117.175:5432/ansung_relay", 
+		 "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
+		 "connection.url":"jdbc:postgresql://10.121.117.175:5432/ansung_relay", 
 		 "connection.user":"ansung", 
 		 "connection.password":"ansung",
-		 "db.timezone" : "Asia/Seoul",
+		 "db.timezone":"Asia/Seoul",
 		 "mode":"timestamp",
-		 "timestamp.column.name" : "otime", %%NULL값가능 컬럼 입력하면 오류%%
-		 "schema.pattern" : "public",
-		 "table.blacklist" : "errors", 
-		 "topic.prefix" : "ansung_relay_topic_",
-		 "transforms" : "InsertKey,IncludeFields",
-		 "transforms.InsertKey.type" : "org.apache.kafka.connect.transforms.ValueToKey",
-		 "transforms.InsertKey.fields" : "datetime",
-		 "transforms.IncludeFields.type" : "org.apache.kafka.connect.transforms.ReplaceField$Value",
-		 "transforms.IncludeFields.include" : "name,rawvalue,datetime"
+		 "timestamp.column.name":"otime", %%NULL값가능 컬럼 입력하면 오류%%
+		 "schema.pattern":"public",
+		 "table.blacklist":"errors", 
+		 "topic.prefix":"ansung_relay_topic_",
+		 "transforms":"InsertKey,IncludeFields",
+		 "transforms.InsertKey.type":"org.apache.kafka.connect.transforms.ValueToKey",
+		 "transforms.InsertKey.fields":"datetime",
+		 "transforms.IncludeFields.type":"org.apache.kafka.connect.transforms.ReplaceField$Value",
+		 "transforms.IncludeFields.include":"name,rawvalue,datetime"
 	} 
 }
 ```

@@ -54,9 +54,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b82b3edfedbacb0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "계정들.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "infra/linux 일반.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "infra/linux 일반.md",
+                "file": "DataLake/Apache Kafka/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "infra/linux 일반.md"
+                "file": "DataLake/Apache Kafka/test.md"
               }
             }
           },
@@ -181,17 +193,17 @@
     "direction": "horizontal",
     "width": 358.5
   },
-  "active": "78b877d092bc99a9",
+  "active": "a6897533a43ddcc4",
   "lastOpenFiles": [
     "계정들.md",
     "DB/PostgreSQL.md",
+    "infra/linux 일반.md",
     "DataLake/Apache Kafka/test.md",
     "MLOPS/BentoML.md",
     "MLOPS/아키텍쳐.md",
     "DataLake/hadoop ecosystem/HDFS/General.md",
     "DataLake/hadoop ecosystem/HDFS/분석서버 초기세팅.md",
     "DataLake/Apache Airflow/칠성 airflow.md",
-    "MLOPS/디자인패턴.md",
-    "Language/Pandas.md"
+    "MLOPS/디자인패턴.md"
   ]
 }

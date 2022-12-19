@@ -72,6 +72,7 @@ PostgreSQL에서 제공하느 프로그램 언어
 ## 일반적인 흐름
 1. 원하는 동작을 function으로 정의하고 ex. update_datetime()
 2. 관심있는 테이블에 function을 엮은 trigger 생성 ex. trg_after_insert_tag01
+3. 트리거 생성 구문(create trigger) 수행 후 커밋
 
 ## 문법
 ```SQL
