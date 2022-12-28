@@ -56,7 +56,19 @@ df['column_name'].value_counts() # unique value 별 row 수
 ![[Pasted image 20221003183403.png]]
 
 ## 조작하기
-### Slicing, Selecting, Filtering
+
+###   자르기 : Slicing, Selecting, Filtering
+#### 조건 (= mask)에 따라 잘라야한다
+조건을 명세해 boolean 으로 값이 채워진 마스킹 판을 df에 얹는 방식
+```python
+# 1. IN : 이 값들을 가진 행
+mask = df.컬럼명.isin([포함대상값1, 포함대상값2, ...])
+
+# 2. LIKE. 이 문자열을 포함한 행
+mask = df.컬럼명.str.contains('포함여부 확인할 문자열')
+
+```
+
 #### Column
 ```python
 DataFrame[['FieldName1', 'FieldName2', ...]]
@@ -106,7 +118,7 @@ df.loc[[10,30], 'FieldName1': 'FieldName2']
 df.loc[(df.필드1 조건식) &(or |) (df.필드2 조건식), ['FieldName1', 'FieldName2', ...]]
 df.loc[(df.필드1 조건식) &(or |) (df.필드2 조건식), ['FieldName1' : 'FieldName4']]
 ```
-### Combine
+### 붙이기 : Combine
 #### Join
 **how : left, right, inner, outer**
 ```python
@@ -164,8 +176,26 @@ df.applymap(lambda x : '%.2f'% x if (x > 5)  else x) # item별로 iteration 돌�
 ### Type 변환
 [document](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.astype.html)
 ```python
-df.astype(dtype)
+df.컬럼명 = df.컬럼명.astype(dtype) # 재할당해줘야 df에 적용됨
+# ex. df['DataFrame Column'].astype(str)
+
+df.컬럼명 = df.컬럼명.apply(dtype)
+# ex. df['DataFrame Column'].apply(str)
+
+
+# 여러컬럼 한번에
+df = df.astype({'시가':'int', ...})
 ```
+### 문자열 조작
+```python
+# 1. TRIM : 좌아악 자르기
+df.컬럼명.str.strip('자르고싶은 문자열 패턴') # strip() 이면 공백 제거
+df.컬럼명.str.lstrip('자르고싶은 문자열 패턴') # 문자열 좌측편 패턴 제거
+df.컬럼명.str.rstrip('자르고싶은 문자열 패턴') # 문자열 우측편 패턴 제거
+
+```
+
+
 # DataFrame.GroupBy
 [document](https://pandas.pydata.org/docs/reference/groupby.html)
 ![[Pasted image 20221003192422.png]]
