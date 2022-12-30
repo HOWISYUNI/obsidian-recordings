@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "Language/Pandas.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "Language/Pandas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md",
+                "file": "Language/Pandas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/Apache Kafka/test.md"
+                "file": "Language/Pandas.md"
               }
             }
           },
@@ -204,12 +204,12 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "b82b3edfedbacb0e",
+  "active": "a54462a048570516",
   "lastOpenFiles": [
+    "DataLake/Apache Kafka/test.md",
     "Language/Pandas.md",
     "infra/Docker/Docker.md",
     "infra/linux 일반.md",
-    "DataLake/Apache Kafka/test.md",
     "infra/SSH key 생성 및 등록.md",
     "DB/PostgreSQL.md",
     "계정들.md",
