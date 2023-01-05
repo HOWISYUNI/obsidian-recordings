@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "계정들.md",
+                "file": "Language/Pandas.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "계정들.md",
+                "file": "Language/Pandas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "계정들.md",
+                "file": "Language/Pandas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "계정들.md"
+                "file": "Language/Pandas.md"
               }
             }
           },
@@ -206,13 +206,13 @@
   },
   "active": "a54462a048570516",
   "lastOpenFiles": [
+    "infra/SSH key 생성 및 등록.md",
+    "계정들.md",
     "Language/Pandas.md",
     "DataLake/Apache Kafka/test.md",
     "infra/Docker/Docker.md",
     "infra/linux 일반.md",
-    "infra/SSH key 생성 및 등록.md",
     "DB/PostgreSQL.md",
-    "계정들.md",
     "MLOPS/BentoML.md",
     "MLOPS/아키텍쳐.md",
     "DataLake/hadoop ecosystem/HDFS/General.md"
