@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Language/Pandas.md",
+                "file": "infra/linux 일반.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,8 +67,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -134,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Pandas.md",
+                "file": "infra/Docker/Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Language/Pandas.md",
+                "file": "infra/Docker/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Pandas.md"
+                "file": "infra/Docker/Docker.md"
               }
             }
           },
@@ -204,14 +203,14 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "a54462a048570516",
+  "active": "6a86d8ade6284974",
   "lastOpenFiles": [
+    "infra/linux 일반.md",
+    "infra/Docker/Docker.md",
+    "Language/Pandas.md",
     "infra/SSH key 생성 및 등록.md",
     "계정들.md",
-    "Language/Pandas.md",
     "DataLake/Apache Kafka/test.md",
-    "infra/Docker/Docker.md",
-    "infra/linux 일반.md",
     "DB/PostgreSQL.md",
     "MLOPS/BentoML.md",
     "MLOPS/아키텍쳐.md",

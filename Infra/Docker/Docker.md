@@ -73,6 +73,15 @@ docker run -v 'pwd':/app ...
 ## 포트포워딩 개념
 https://tttsss77.tistory.com/155
 
+## top : 컨테이너 내 프로세스 리소스 모니터링
+- `docker container top {컨테이너명}`: 전체리소스
+- `docker container top {컨테이너명} | grep {키워드}`
+	- 키워드로 프로세스 모니터링
+	- 머신 내 이상 프로세스의 PID가 컨테이너 내에서 어떻게 돌고있는지 확인할때 사용했음
+- 필드
+	1. PID : 프로세스 아이디
+	2. PPID : Parent PID. 부모 프로세스 PID
+
 # 해결
 ## 이미있는 컨테이너에 새 볼륨을 마운트하고싶어요
 [출처](https://stackoverflow.com/questions/28302178/how-can-i-add-a-volume-to-an-existing-docker-container)
