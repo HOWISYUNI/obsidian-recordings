@@ -13,7 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "infra/Docker/Docker.md",
+                "file": "MLOPS/BentoML.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7e1ad9b402829e20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MLOPS/참고 블로그 내용.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "624ceb53e20c982e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DataLake/Apache Kafka/CDC.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +91,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -133,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "infra/Docker/Docker.md",
+                "file": "DataLake/Apache Kafka/CDC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "infra/Docker/Docker.md",
+                "file": "DataLake/Apache Kafka/CDC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "infra/Docker/Docker.md"
+                "file": "DataLake/Apache Kafka/CDC.md"
               }
             }
           },
@@ -203,17 +228,17 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "6a86d8ade6284974",
+  "active": "624ceb53e20c982e",
   "lastOpenFiles": [
-    "infra/linux 일반.md",
+    "DataLake/Apache Kafka/test.md",
+    "DataLake/Apache Kafka/CDC.md",
+    "MLOPS/참고 블로그 내용.md",
+    "MLOPS/BentoML.md",
     "infra/Docker/Docker.md",
+    "infra/linux 일반.md",
     "Language/Pandas.md",
     "infra/SSH key 생성 및 등록.md",
     "계정들.md",
-    "DataLake/Apache Kafka/test.md",
-    "DB/PostgreSQL.md",
-    "MLOPS/BentoML.md",
-    "MLOPS/아키텍쳐.md",
-    "DataLake/hadoop ecosystem/HDFS/General.md"
+    "DB/PostgreSQL.md"
   ]
 }

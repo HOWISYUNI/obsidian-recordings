@@ -3,6 +3,40 @@ linux 이미지 하나 pull 받아서 그 위에서 kafka 바이너리 테스트
 [Confluent Developer Documentaion](https://docs.confluent.io/home/overview.html)
 [Confluent blog](https://www.confluent.io/blog/)
 
+# Confluent vs Apache kafka
+## Confluent 
+### Enterprise (Subscription) License
+The following Confluent Platform components are under the Confluent Enterprise License:
+-   [Confluent Server](https://docs.confluent.io/platform/7.1.3/installation/available_packages.html#confluent-server-package)
+    The following are a few key features included in Confluent Server:
+    -   [Role-based Access Control (RBAC)](https://docs.confluent.io/platform/7.1.3/security/rbac/index.html#rbac-overview)
+    -   [Structured Audit Logs](https://docs.confluent.io/platform/7.1.3/security/audit-logs/audit-logs-concepts.html#audit-logs-concepts)
+    -   [Secrets Protection](https://docs.confluent.io/platform/7.1.3/security/secrets.html#secrets)
+    -   [Schema Validation](https://docs.confluent.io/platform/7.1.3/schema-registry/schema-validation.html#schema-validation)
+    -   [Schema Registry Security Plugin](https://docs.confluent.io/platform/7.1.3/confluent-security-plugins/schema-registry/introduction.html#confluentsecurityplugins-schema-registry-security-plugin)
+    -   [Tiered Storage](https://docs.confluent.io/platform/7.1.3/kafka/tiered-storage.html#tiered-storage)
+    -   [Self-Balancing Clusters](https://docs.confluent.io/platform/7.1.3/kafka/sbc/index.html#sbc)
+    -   [Multi-Region Clusters](https://docs.confluent.io/platform/7.1.3/multi-dc-deployments/multi-region.html#bmrr)
+    -   [Cluster Linking](https://docs.confluent.io/platform/7.1.3/multi-dc-deployments/cluster-linking/index.html#cluster-linking)
+-   [Schema Linking (preview)](https://docs.confluent.io/platform/7.1.3/schema-registry/schema-linking-cp.html#schema-linking-cp-overview)
+-   Pre-built Connectors
+    In [Confluent Hub](https://www.confluent.io/hub), filter by the Premium and Commercial license types to see the Connectors under the Confluent Enterprise License.
+-   [Confluent Control Center](https://docs.confluent.io/platform/7.1.3/control-center/index.html#control-center)
+-   [Confluent for Kubernetes](https://docs.confluent.io/operator/current/overview.html)
+-   [Confluent Replicator](https://docs.confluent.io/platform/7.1.3/multi-dc-deployments/replicator/index.html#replicator-detail)  
+-   [MQTT Proxy](https://docs.confluent.io/platform/7.1.3/kafka-mqtt/index.html#mqtt-proxy)
+
+### Community License
+The following Confluent Platform components are under the Confluent Community License
+-   Pre-built Connectors
+    In [Confluent Hub](https://www.confluent.io/hub), filter by the Free license type to see the Connectors under the Community License.
+-   [Confluent REST Proxy](https://docs.confluent.io/platform/7.1.3/kafka-rest/index.html#kafkarest-intro)
+-   [ksqlDB](https://docs.confluent.io/platform/7.1.3/ksqldb/index.html#ksql-home)
+-   [Confluent Schema Registry](https://docs.confluent.io/platform/7.1.3/schema-registry/index.html#schemaregistry-intro)
+-   [Confluent Admin REST API](https://docs.confluent.io/platform/7.1.3/kafka-rest/production-deployment/confluent-server/index.html#confluent-server-rest-deployment)
+
+
+
 # Kafka Broker
 ## 설치 (broker, connect)
 명령어 흐름
