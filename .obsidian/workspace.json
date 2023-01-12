@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -158,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataLake/Apache Kafka/CDC.md",
+                "file": "infra/linux 일반.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataLake/Apache Kafka/CDC.md",
+                "file": "infra/linux 일반.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataLake/Apache Kafka/CDC.md"
+                "file": "infra/linux 일반.md"
               }
             }
           },
@@ -228,10 +228,10 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "624ceb53e20c982e",
+  "active": "a54462a048570516",
   "lastOpenFiles": [
-    "DataLake/Apache Kafka/test.md",
     "DataLake/Apache Kafka/CDC.md",
+    "DataLake/Apache Kafka/test.md",
     "MLOPS/참고 블로그 내용.md",
     "MLOPS/BentoML.md",
     "infra/Docker/Docker.md",
