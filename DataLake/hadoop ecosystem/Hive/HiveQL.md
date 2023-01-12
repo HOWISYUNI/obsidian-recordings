@@ -76,3 +76,4 @@ Group by a,b,c는 a를 drill down 하는 hirearchy를 가정
 # 데이터타입
 ![[Pasted image 20220818162246.png]]
 ![[Pasted image 20220818162254.png]]
+![[Pasted image 20230112160657.png]]
