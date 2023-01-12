@@ -11,7 +11,7 @@ CREATE EXTERNAL TABLE ods.factory_as_mes_bom_info(
 	bom_mat_name string COMMENT 'BOM자재명',
 	bom_mat_cls varchar(50) COMMENT 'BOM자재분류코드',
 	bom_mat_cls_name string COMMENT 'BOM자재분류명')
-PARTITIONED BY (pt_ymd STRING) -- 파티셔닝 할 경우 기준 
+PARTITIONED BY (pt_ymd STRING, vkgrp STRING) -- 파티셔닝 할 경우 기준 
 ROW FORMAT DELIMITED
       FIELDS TERMINATED BY '' -- 오류가 나지 않을법한 구분자
       ESCAPED BY '\\'

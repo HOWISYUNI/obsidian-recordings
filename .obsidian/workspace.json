@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "infra/linux 일반.md",
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "infra/linux 일반.md",
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "infra/linux 일반.md",
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "infra/linux 일반.md"
+                "file": "DataLake/hadoop ecosystem/Hive/HiveQL.md"
               }
             }
           },
@@ -215,7 +215,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 358.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,14 +228,14 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "a54462a048570516",
+  "active": "a6897533a43ddcc4",
   "lastOpenFiles": [
+    "infra/linux 일반.md",
     "DataLake/Apache Kafka/CDC.md",
     "DataLake/Apache Kafka/test.md",
     "MLOPS/참고 블로그 내용.md",
     "MLOPS/BentoML.md",
     "infra/Docker/Docker.md",
-    "infra/linux 일반.md",
     "Language/Pandas.md",
     "infra/SSH key 생성 및 등록.md",
     "계정들.md",
