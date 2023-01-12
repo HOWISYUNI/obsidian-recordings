@@ -2,7 +2,7 @@
 ## CSV
 ```SQL
 CREATE EXTERNAL TABLE ods.factory_as_mes_bom_info(
-	po_cd varchar(50) COMMENT 'PO코드', 
+	po_cd varchar(50) COMMENT 'PO코드',  -- NOT NULL 제한 불가능
 	po_mat varchar(100) COMMENT 'PO제품코드',
 	po_mat_name string COMMENT 'PO제품명',
 	bom_version varchar(100) COMMENT 'BOM버전',
@@ -17,7 +17,7 @@ ROW FORMAT DELIMITED
       ESCAPED BY '\\'
       LINES TERMINATED BY '\n' 
 STORED AS TEXTFILE              -- 포맷 : 텍스트파일
-LOCATION '/path/to/your/data' -- INSERT문 수행 시 데이터가 쌓이는 위치
+LOCATION '/path/to/your/data' -- INSERT문 수행 시 데이터가 쌓이는 위치, 생략가능
 ```
 ## PARQUET
 ```SQL
